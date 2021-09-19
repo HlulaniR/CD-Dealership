@@ -43,7 +43,7 @@ namespace CD_Dealership
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			Form2 s1 = new Form2();
+			SignUp s1 = new SignUp();
 			s1.Show();
 		}
 	}
