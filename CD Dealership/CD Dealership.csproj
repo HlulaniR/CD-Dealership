@@ -73,6 +73,12 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecoveryQuiz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecoveryQuiz.Designer.cs">
+      <DependentUpon>RecoveryQuiz.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -24,8 +24,9 @@ namespace CD_Dealership
 		private SqlCommand comm;
 		private SqlDataReader dRead;
 		private string conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nhlul\Desktop\223 Project\CD Dealership\CD Dealership\CDManagementDB.mdf;Integrated Security=True ";
-		//private RecoverQuiz question;
+
 		private string recoveryQuiz;
+		private RecoveryQuiz question;
 		private string recoveryAnswer;
 		private int counter;
 		private string userFirstName = null;
@@ -62,26 +63,85 @@ namespace CD_Dealership
 
 		}
 
-		public bool validateUserInput(string userName, string password, string user_confirm)
+		public string generateUser(string userName) 
+		{
+			// this will give the user a random user ID 
+			Random num = new Random();
+
+			string autoname = userName + num.Next(99, 9999);    //generates username
+
+			return autoname;
+		}
+
+		public bool validateUserName(string userInput)
+		{
+			string userName = null;   // get information from our database
+			bool userExist = false;
+
+
+			con = new SqlConnection(conStr); // openup our database
+			con.Open();
+
+			string readALL = "SELECT *FROM Login";
+			comm = new SqlCommand(readALL, con);
+			dRead = comm.ExecuteReader();
+
+
+			while (dRead.Read() && userName != userInput)    
+			{
+				userName = dRead.GetValue(1).ToString();
+				if (userName == userInput)
+				{
+					userName = generateUser(userFirstName);  
+					errorTxt.Text = "This username already exists , Please provide " + userName;
+					errorTxt.Visible = true;
+					userExist = true;
+				}
+			}
+
+			con.Close();
+			return userExist;
+
+		}
+
+
+		public bool validateUserInput(string userNm, string password, string user_confirm)
 		{
 			int userID;
 			bool quiz = false;
+
 				if (int.TryParse(userIDTxt.Text, out userID))
 				{
-					if (userName != string.Empty)
+					if (userNm != string.Empty)
 					{
-					string userName =userNm ;
-						if (userName != string.Empty && user_confirm != string.Empty)
-						{ 
-							if(validateID(userIDTxt.Text))
+						string userName =userNm ;
+							if (userName != string.Empty && user_confirm != string.Empty)
 							{
+
+								if (password == user_confirm)
+								{ 
+
+									if(validateID(userIDTxt.Text))
+									{
+										if(!validateuserName(userNm))
+										{
+											question = new RecoveryQuiz(); 
+											question.ShowDialog();
+											quiz = question.QuizCreated;
+											recoveryQuiz = question.getQuiz;
+											recoveryAnswer = question.getAnswer;
+										}
+									}
+								}
+
 							
 							}
-						}
 				
 					}
 
 				}
+
+			return quiz;
 		}
 		public int getID(string querry, string user)
 		{
@@ -99,7 +159,7 @@ namespace CD_Dealership
 					counter = int.Parse(dRead.GetValue(0).ToString());
 			}
 			con.Close();
-			return counter
+			return counter;
 		}
 
 		public int createUser(string readLogin, string querry,string password, string userName)
@@ -158,8 +218,8 @@ namespace CD_Dealership
 				if (validateUserInput(userName, password, confirm))
 				{
 					int x = createUser(writeLoginTable, readLogintable, userName, password);
-					string updateQueiry = "UPDATE Employees SET UserID = '" + x.ToString() + "' WHERE Id = '" + int.Parse(txtId.Text) + "'";
-					HR.updatedata(updateQueiry);
+					string updateQuerry = "UPDATE Employees SET UserID = '" + x.ToString() + "' WHERE Id = '" + int.Parse(userIDTxt.Text) + "'";
+					HR.updatedata(updateQuerry);
 					MessageBox.Show("User Name is Successfully created and saved!");
 					this.Close();
 				}

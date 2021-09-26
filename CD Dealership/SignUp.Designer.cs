@@ -45,6 +45,7 @@ namespace CD_Dealership
 			this.label7 = new System.Windows.Forms.Label();
 			this.usernameTxt = new System.Windows.Forms.TextBox();
 			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+			this.errorTxt = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -182,12 +183,22 @@ namespace CD_Dealership
 			// 
 			this.errorProvider1.ContainerControl = this;
 			// 
+			// errorTxt
+			// 
+			this.errorTxt.AutoSize = true;
+			this.errorTxt.Location = new System.Drawing.Point(109, 292);
+			this.errorTxt.Name = "errorTxt";
+			this.errorTxt.Size = new System.Drawing.Size(43, 17);
+			this.errorTxt.TabIndex = 14;
+			this.errorTxt.Text = "*******";
+			// 
 			// SignUp
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(549, 497);
+			this.Controls.Add(this.errorTxt);
 			this.Controls.Add(this.usernameTxt);
 			this.Controls.Add(this.label7);
 			this.Controls.Add(this.button2);
@@ -228,5 +239,6 @@ namespace CD_Dealership
 		private System.Windows.Forms.Label label7;
 		private System.Windows.Forms.TextBox usernameTxt;
 		private System.Windows.Forms.ErrorProvider errorProvider1;
+		private System.Windows.Forms.Label errorTxt;
 	}
 }
