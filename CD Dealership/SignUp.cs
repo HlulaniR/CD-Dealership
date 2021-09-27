@@ -31,7 +31,23 @@ namespace CD_Dealership
 		private int counter;
 		private string userFirstName = null;
 
+		public void update(string querry)
+		{
+			try
+			{
+				con = new SqlConnection(conStr);
+				con.Open();
 
+				comm = new SqlCommand(querry, con);
+				comm.ExecuteNonQuery();
+				con.Close();
+				MessageBox.Show("Updated");
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
 		public bool validateID(string userInput)
 		{
 			bool validity = false;
@@ -112,35 +128,48 @@ namespace CD_Dealership
 
 				if (int.TryParse(userIDTxt.Text, out userID))
 				{
-					if (userNm != string.Empty)
+				if (userNm != string.Empty)
+				{
+					string userName = userNm;
+					if (userName != string.Empty && user_confirm != string.Empty)
 					{
-						string userName =userNm ;
-							if (userName != string.Empty && user_confirm != string.Empty)
+
+						if (password == user_confirm)
+						{
+
+							if (validateID(userIDTxt.Text))
 							{
-
-								if (password == user_confirm)
-								{ 
-
-									if(validateID(userIDTxt.Text))
-									{
-										if(!validateuserName(userNm))
-										{
-											question = new RecoveryQuiz(); 
-											question.ShowDialog();
-											quiz = question.QuizCreated;
-											recoveryQuiz = question.getQuiz;
-											recoveryAnswer = question.getAnswer;
-										}
-									}
+								if (!validateUserName(userNm))
+								{
+									question = new RecoveryQuiz();
+									question.ShowDialog();
+									quiz = question.QuizCreated;
+									recoveryQuiz = question.getQuiz;
+									recoveryAnswer = question.getAnswer;
 								}
-
-							
 							}
-				
+						}
+						else
+						{
+							errorProvider1.SetError(passwordTxt, "Please provide passwords that match ");
+						}
+
+					}
+					else
+					{
+						MessageBox.Show("Create password");
 					}
 
 				}
+					else
+					{
+						errorProvider1.SetError(usernameTxt, "Please enter your username.");
+					}
 
+				}
+					else{
+						errorProvider1.SetError(userIDTxt, "Invalid user ID input.");
+					}
 			return quiz;
 		}
 		public int getID(string querry, string user)
@@ -219,7 +248,7 @@ namespace CD_Dealership
 				{
 					int x = createUser(writeLoginTable, readLogintable, userName, password);
 					string updateQuerry = "UPDATE Employees SET UserID = '" + x.ToString() + "' WHERE Id = '" + int.Parse(userIDTxt.Text) + "'";
-					HR.updatedata(updateQuerry);
+					HR.update(updateQuerry);
 					MessageBox.Show("User Name is Successfully created and saved!");
 					this.Close();
 				}
