@@ -32,5 +32,73 @@ namespace CD_Dealership
 		{
 
 		}
+		public bool validateInput(string input)
+		{
+			if (input == string.Empty)
+				return false;
+			else
+				return true;
+
+		}
+		public void readAll(string querry)
+		{
+			try 
+			{
+				con = new SqlConnection(conStr);
+				con.Open();
+				comm = new SqlCommand(querry, con);
+				adp = new SqlDataAdapter();
+				ds = new DataSet();
+
+				adp.SelectCommand = comm;
+				adp.Fill(ds, "data");
+
+				dataView.DataSource = ds;
+				dataView.DataMember = "data";
+
+				con.Close();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			int no;
+			char gender;
+			if (validateInput(nameTxt.Text))
+			{
+				if (validateInput(surnameTxt.Text))
+				{
+					if (maleBttn.Checked || femaleBttn.Checked)
+					{
+						if (maleBttn.Checked)
+						{ 
+							gender = 'M';
+						}
+						else
+						{
+							gender = 'F';
+						}
+							if (validateInput(emailTxt.Text))
+							{
+								if (int.TryParse(phoneNumberTxt.Text, out no))
+								{
+									if (validateInput(comboBox1.Text))
+									{
+										string save = "INSERT INTO Employees VALUES(@UserID, @FirstName, @LastName, @Gender, @Email, @Phone_No, @Address, @Position, )";;
+										addEmployee(save,nameTxt.Text, surnameTxt.Text, gender, emailTxt.Text, int.Parse(phoneNumberTxt.Text),addressTxt.Text,comboBox1.Text );
+										MessageBox.Show("Employee is successfully added");
+									readAll(readEmployees);
+									}
+								}
+							}
+					}
+				}
+			}
+
+		}
 	}
 }

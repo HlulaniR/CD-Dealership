@@ -40,6 +40,7 @@ namespace CD_Dealership
 			this.button2 = new System.Windows.Forms.Button();
 			this.showPass = new System.Windows.Forms.Button();
 			this.hideBttn = new System.Windows.Forms.Button();
+			this.button3 = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -56,7 +57,7 @@ namespace CD_Dealership
 			// label2
 			// 
 			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(71, 86);
+			this.label2.Location = new System.Drawing.Point(53, 72);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(81, 17);
 			this.label2.TabIndex = 1;
@@ -64,7 +65,7 @@ namespace CD_Dealership
 			// 
 			// usernameTxt
 			// 
-			this.usernameTxt.Location = new System.Drawing.Point(171, 86);
+			this.usernameTxt.Location = new System.Drawing.Point(153, 72);
 			this.usernameTxt.Name = "usernameTxt";
 			this.usernameTxt.Size = new System.Drawing.Size(175, 22);
 			this.usernameTxt.TabIndex = 2;
@@ -72,7 +73,7 @@ namespace CD_Dealership
 			// label3
 			// 
 			this.label3.AutoSize = true;
-			this.label3.Location = new System.Drawing.Point(74, 132);
+			this.label3.Location = new System.Drawing.Point(56, 109);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(73, 17);
 			this.label3.TabIndex = 3;
@@ -82,7 +83,7 @@ namespace CD_Dealership
 			// 
 			this.label4.AutoSize = true;
 			this.label4.ForeColor = System.Drawing.Color.Red;
-			this.label4.Location = new System.Drawing.Point(100, 258);
+			this.label4.Location = new System.Drawing.Point(103, 197);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(278, 17);
 			this.label4.TabIndex = 4;
@@ -90,7 +91,7 @@ namespace CD_Dealership
 			// 
 			// passwordTxt
 			// 
-			this.passwordTxt.Location = new System.Drawing.Point(171, 132);
+			this.passwordTxt.Location = new System.Drawing.Point(153, 109);
 			this.passwordTxt.Name = "passwordTxt";
 			this.passwordTxt.PasswordChar = '*';
 			this.passwordTxt.Size = new System.Drawing.Size(175, 22);
@@ -98,9 +99,9 @@ namespace CD_Dealership
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(171, 190);
+			this.button1.Location = new System.Drawing.Point(140, 148);
 			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 47);
+			this.button1.Size = new System.Drawing.Size(87, 29);
 			this.button1.TabIndex = 7;
 			this.button1.Text = "Sign In";
 			this.button1.UseVisualStyleBackColor = true;
@@ -108,7 +109,7 @@ namespace CD_Dealership
 			// forgotpassLbl
 			// 
 			this.forgotpassLbl.AutoSize = true;
-			this.forgotpassLbl.Location = new System.Drawing.Point(363, 177);
+			this.forgotpassLbl.Location = new System.Drawing.Point(345, 154);
 			this.forgotpassLbl.Name = "forgotpassLbl";
 			this.forgotpassLbl.Size = new System.Drawing.Size(122, 17);
 			this.forgotpassLbl.TabIndex = 8;
@@ -116,9 +117,9 @@ namespace CD_Dealership
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(271, 190);
+			this.button2.Location = new System.Drawing.Point(241, 148);
 			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 47);
+			this.button2.Size = new System.Drawing.Size(87, 29);
 			this.button2.TabIndex = 9;
 			this.button2.Text = "Sign Up";
 			this.button2.UseVisualStyleBackColor = true;
@@ -126,7 +127,7 @@ namespace CD_Dealership
 			// 
 			// showPass
 			// 
-			this.showPass.Location = new System.Drawing.Point(352, 129);
+			this.showPass.Location = new System.Drawing.Point(348, 106);
 			this.showPass.Name = "showPass";
 			this.showPass.Size = new System.Drawing.Size(116, 30);
 			this.showPass.TabIndex = 10;
@@ -136,7 +137,7 @@ namespace CD_Dealership
 			// 
 			// hideBttn
 			// 
-			this.hideBttn.Location = new System.Drawing.Point(352, 128);
+			this.hideBttn.Location = new System.Drawing.Point(348, 105);
 			this.hideBttn.Name = "hideBttn";
 			this.hideBttn.Size = new System.Drawing.Size(116, 31);
 			this.hideBttn.TabIndex = 10;
@@ -144,12 +145,22 @@ namespace CD_Dealership
 			this.hideBttn.UseVisualStyleBackColor = true;
 			this.hideBttn.Click += new System.EventHandler(this.button4_Click);
 			// 
+			// button3
+			// 
+			this.button3.Location = new System.Drawing.Point(382, 13);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(75, 81);
+			this.button3.TabIndex = 11;
+			this.button3.Text = "button3";
+			this.button3.UseVisualStyleBackColor = true;
+			// 
 			// Login
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(513, 314);
+			this.ClientSize = new System.Drawing.Size(491, 235);
+			this.Controls.Add(this.button3);
 			this.Controls.Add(this.showPass);
 			this.Controls.Add(this.hideBttn);
 			this.Controls.Add(this.button2);
@@ -183,6 +194,7 @@ namespace CD_Dealership
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button showPass;
 		private System.Windows.Forms.Button hideBttn;
+		private System.Windows.Forms.Button button3;
 	}
 }
 
