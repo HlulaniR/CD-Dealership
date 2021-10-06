@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace CD_Dealership
 {
-	public partial class RecoveryQuiz : Form
+	public partial class CD_Dealership : Form
 	{
-		public RecoveryQuiz()
+		public CD_Dealership()
 		{
 			InitializeComponent();
-		}
-
-		private void RecoveryQuiz_Load(object sender, EventArgs e)
-		{
-
 		}
 	}
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace CD_Dealership
 {
-	partial class RecoveryQuiz
+	partial class CD_Dealership
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -29,18 +29,10 @@ namespace CD_Dealership
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.SuspendLayout();
-			// 
-			// RecoveryQuiz
-			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.components = new System.ComponentModel.Container();
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(800, 450);
-			this.Name = "RecoveryQuiz";
-			this.Text = "RecoveryQuiz";
-			this.Load += new System.EventHandler(this.RecoveryQuiz_Load);
-			this.ResumeLayout(false);
-
+			this.Text = "CD_Dealership";
 		}
 
 		#endregion
