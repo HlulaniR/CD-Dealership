@@ -122,13 +122,22 @@ namespace CD_Dealership
 						CD.ShowDialog();
 						this.Close();
 					}
-					else if (temp[2]=="HR")
+					else if (temp[2] == "HR")
 					{
-						
+
 						HR.ShowDialog();
 						this.Close();
 					}
-
+					else if (temp[2] == "Admin")
+					{
+						
+						CD.ShowDialog();
+						this.Close();
+					}
+					else if (temp[2] == "Sales Manager")
+					{
+						(new Sales()).ShowDialog();
+					}
 				}
 
 

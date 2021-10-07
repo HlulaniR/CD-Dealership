@@ -97,6 +97,12 @@
     <Compile Include="RecoveryQuiz.Designer.cs">
       <DependentUpon>RecoveryQuiz.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CD_Dealership.resx">
+      <DependentUpon>CD_Dealership.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Human_Resource.resx">
       <DependentUpon>Human_Resource.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RecoveryQuiz.resx">
       <DependentUpon>RecoveryQuiz.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
