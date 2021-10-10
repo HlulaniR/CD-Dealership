@@ -31,12 +31,27 @@ namespace CD_Dealership
 		{
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.saveAndCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.viewToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.otherDepartmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.humanResourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.logisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.accountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.Inventory = new System.Windows.Forms.TabControl();
 			this.tabPage1 = new System.Windows.Forms.TabPage();
+			this.Orders = new System.Windows.Forms.Label();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.button4 = new System.Windows.Forms.Button();
+			this.textBox7 = new System.Windows.Forms.TextBox();
+			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.Add = new System.Windows.Forms.GroupBox();
+			this.btn = new System.Windows.Forms.Button();
+			this.txtID = new System.Windows.Forms.TextBox();
+			this.label9 = new System.Windows.Forms.Label();
 			this.tabPage2 = new System.Windows.Forms.TabPage();
 			this.dataView = new System.Windows.Forms.DataGridView();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -64,34 +79,50 @@ namespace CD_Dealership
 			this.label5 = new System.Windows.Forms.Label();
 			this.label8 = new System.Windows.Forms.Label();
 			this.lblFN = new System.Windows.Forms.Label();
-			this.userLbl = new System.Windows.Forms.Label();
-			this.Add = new System.Windows.Forms.GroupBox();
-			this.btn = new System.Windows.Forms.Button();
-			this.txtID = new System.Windows.Forms.TextBox();
-			this.label9 = new System.Windows.Forms.Label();
-			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.groupBox3 = new System.Windows.Forms.GroupBox();
-			this.button4 = new System.Windows.Forms.Button();
-			this.textBox7 = new System.Windows.Forms.TextBox();
-			this.Orders = new System.Windows.Forms.Label();
 			this.tabPage3 = new System.Windows.Forms.TabPage();
-			this.otherDepartmentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.humanResourceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.salesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.logisticsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.clientsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.saveAndCloseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.userLbl = new System.Windows.Forms.Label();
+			this.SO = new System.Windows.Forms.ListBox();
+			this.label13 = new System.Windows.Forms.Label();
+			this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+			this.PO = new System.Windows.Forms.ListBox();
+			this.dataGridView3 = new System.Windows.Forms.DataGridView();
+			this.tabPage4 = new System.Windows.Forms.TabPage();
+			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.label10 = new System.Windows.Forms.Label();
+			this.button3 = new System.Windows.Forms.Button();
+			this.comboBox4 = new System.Windows.Forms.ComboBox();
+			this.label11 = new System.Windows.Forms.Label();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.button2 = new System.Windows.Forms.Button();
+			this.textBox4 = new System.Windows.Forms.TextBox();
+			this.groupBox5 = new System.Windows.Forms.GroupBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.comboBox5 = new System.Windows.Forms.ComboBox();
+			this.ProdcomboBox = new System.Windows.Forms.ComboBox();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.dataGridView2 = new System.Windows.Forms.DataGridView();
+			this.groupBox6 = new System.Windows.Forms.GroupBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.label12 = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.Inventory.SuspendLayout();
 			this.tabPage1.SuspendLayout();
+			this.groupBox3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+			this.Add.SuspendLayout();
 			this.tabPage2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
-			this.Add.SuspendLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			this.groupBox3.SuspendLayout();
+			this.tabPage3.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+			this.tabPage4.SuspendLayout();
+			this.groupBox7.SuspendLayout();
+			this.groupBox5.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+			this.groupBox6.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -114,21 +145,68 @@ namespace CD_Dealership
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveAndCloseToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 21);
 			this.fileToolStripMenuItem.Text = "File";
+			// 
+			// saveAndCloseToolStripMenuItem
+			// 
+			this.saveAndCloseToolStripMenuItem.Name = "saveAndCloseToolStripMenuItem";
+			this.saveAndCloseToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+			this.saveAndCloseToolStripMenuItem.Text = "Save and Close";
+			this.saveAndCloseToolStripMenuItem.Click += new System.EventHandler(this.saveAndCloseToolStripMenuItem_Click);
 			// 
 			// viewToolStripMenuItem
 			// 
 			this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.otherDepartmentsToolStripMenuItem});
 			this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-			this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
+			this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
 			this.viewToolStripMenuItem.Text = "View";
+			this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
+			// 
+			// otherDepartmentsToolStripMenuItem
+			// 
+			this.otherDepartmentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.humanResourceToolStripMenuItem,
+            this.salesToolStripMenuItem,
+            this.logisticsToolStripMenuItem,
+            this.clientsToolStripMenuItem});
+			this.otherDepartmentsToolStripMenuItem.Name = "otherDepartmentsToolStripMenuItem";
+			this.otherDepartmentsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.otherDepartmentsToolStripMenuItem.Text = "Other Departments";
+			// 
+			// humanResourceToolStripMenuItem
+			// 
+			this.humanResourceToolStripMenuItem.Name = "humanResourceToolStripMenuItem";
+			this.humanResourceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.humanResourceToolStripMenuItem.Text = "Human Resource";
+			this.humanResourceToolStripMenuItem.Click += new System.EventHandler(this.humanResourceToolStripMenuItem_Click);
+			// 
+			// salesToolStripMenuItem
+			// 
+			this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
+			this.salesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.salesToolStripMenuItem.Text = "Sales";
+			this.salesToolStripMenuItem.Click += new System.EventHandler(this.salesToolStripMenuItem_Click);
+			// 
+			// logisticsToolStripMenuItem
+			// 
+			this.logisticsToolStripMenuItem.Name = "logisticsToolStripMenuItem";
+			this.logisticsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.logisticsToolStripMenuItem.Text = "Logistics";
+			this.logisticsToolStripMenuItem.Click += new System.EventHandler(this.logisticsToolStripMenuItem_Click);
+			// 
+			// clientsToolStripMenuItem
+			// 
+			this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
+			this.clientsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.clientsToolStripMenuItem.Text = "Clients";
+			this.clientsToolStripMenuItem.Click += new System.EventHandler(this.clientsToolStripMenuItem_Click);
 			// 
 			// editToolStripMenuItem
 			// 
 			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-			this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+			this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 21);
 			this.editToolStripMenuItem.Text = "Edit";
 			// 
 			// accountToolStripMenuItem
@@ -136,18 +214,19 @@ namespace CD_Dealership
 			this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem});
 			this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-			this.accountToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+			this.accountToolStripMenuItem.Size = new System.Drawing.Size(77, 21);
 			this.accountToolStripMenuItem.Text = "Account";
 			// 
 			// changePasswordToolStripMenuItem
 			// 
 			this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-			this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+			this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
 			this.changePasswordToolStripMenuItem.Text = "Change Password";
 			this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
 			// 
 			// Inventory
 			// 
+			this.Inventory.Controls.Add(this.tabPage4);
 			this.Inventory.Controls.Add(this.tabPage1);
 			this.Inventory.Controls.Add(this.tabPage2);
 			this.Inventory.Controls.Add(this.tabPage3);
@@ -160,6 +239,7 @@ namespace CD_Dealership
 			// tabPage1
 			// 
 			this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.tabPage1.Controls.Add(this.dataGridView3);
 			this.tabPage1.Controls.Add(this.Orders);
 			this.tabPage1.Controls.Add(this.groupBox3);
 			this.tabPage1.Controls.Add(this.dataGridView1);
@@ -170,6 +250,102 @@ namespace CD_Dealership
 			this.tabPage1.Size = new System.Drawing.Size(940, 466);
 			this.tabPage1.TabIndex = 2;
 			this.tabPage1.Text = "Inventory";
+			// 
+			// Orders
+			// 
+			this.Orders.AutoSize = true;
+			this.Orders.Location = new System.Drawing.Point(20, 202);
+			this.Orders.Name = "Orders";
+			this.Orders.Size = new System.Drawing.Size(52, 17);
+			this.Orders.TabIndex = 4;
+			this.Orders.Text = "Orders";
+			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.button4);
+			this.groupBox3.Controls.Add(this.textBox7);
+			this.groupBox3.Location = new System.Drawing.Point(318, 17);
+			this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+			this.groupBox3.Size = new System.Drawing.Size(267, 165);
+			this.groupBox3.TabIndex = 3;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Delete";
+			// 
+			// button4
+			// 
+			this.button4.Location = new System.Drawing.Point(81, 91);
+			this.button4.Margin = new System.Windows.Forms.Padding(4);
+			this.button4.Name = "button4";
+			this.button4.Size = new System.Drawing.Size(100, 28);
+			this.button4.TabIndex = 5;
+			this.button4.Text = "Delete";
+			this.button4.UseVisualStyleBackColor = true;
+			this.button4.Click += new System.EventHandler(this.button4_Click);
+			// 
+			// textBox7
+			// 
+			this.textBox7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.textBox7.Location = new System.Drawing.Point(56, 47);
+			this.textBox7.Margin = new System.Windows.Forms.Padding(4);
+			this.textBox7.Name = "textBox7";
+			this.textBox7.Size = new System.Drawing.Size(155, 22);
+			this.textBox7.TabIndex = 4;
+			this.textBox7.Text = "ID to delete";
+			// 
+			// dataGridView1
+			// 
+			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView1.Location = new System.Drawing.Point(7, 219);
+			this.dataGridView1.Name = "dataGridView1";
+			this.dataGridView1.RowHeadersWidth = 51;
+			this.dataGridView1.RowTemplate.Height = 24;
+			this.dataGridView1.Size = new System.Drawing.Size(267, 208);
+			this.dataGridView1.TabIndex = 2;
+			// 
+			// Add
+			// 
+			this.Add.Controls.Add(this.btn);
+			this.Add.Controls.Add(this.txtID);
+			this.Add.Controls.Add(this.label9);
+			this.Add.Location = new System.Drawing.Point(7, 17);
+			this.Add.Margin = new System.Windows.Forms.Padding(4);
+			this.Add.Name = "Add";
+			this.Add.Padding = new System.Windows.Forms.Padding(4);
+			this.Add.Size = new System.Drawing.Size(267, 165);
+			this.Add.TabIndex = 1;
+			this.Add.TabStop = false;
+			this.Add.Text = "Add";
+			// 
+			// btn
+			// 
+			this.btn.Location = new System.Drawing.Point(81, 85);
+			this.btn.Margin = new System.Windows.Forms.Padding(4);
+			this.btn.Name = "btn";
+			this.btn.Size = new System.Drawing.Size(100, 28);
+			this.btn.TabIndex = 4;
+			this.btn.Text = "Add Inventory";
+			this.btn.UseVisualStyleBackColor = true;
+			this.btn.Click += new System.EventHandler(this.btn_Click);
+			// 
+			// txtID
+			// 
+			this.txtID.Location = new System.Drawing.Point(116, 22);
+			this.txtID.Margin = new System.Windows.Forms.Padding(4);
+			this.txtID.Name = "txtID";
+			this.txtID.Size = new System.Drawing.Size(132, 22);
+			this.txtID.TabIndex = 1;
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(13, 31);
+			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(91, 17);
+			this.label9.TabIndex = 0;
+			this.label9.Text = "ID to receive:";
 			// 
 			// tabPage2
 			// 
@@ -470,6 +646,21 @@ namespace CD_Dealership
 			this.lblFN.TabIndex = 0;
 			this.lblFN.Text = "Name:";
 			// 
+			// tabPage3
+			// 
+			this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.tabPage3.Controls.Add(this.PO);
+			this.tabPage3.Controls.Add(this.dateTimePicker1);
+			this.tabPage3.Controls.Add(this.label13);
+			this.tabPage3.Controls.Add(this.SO);
+			this.tabPage3.Location = new System.Drawing.Point(4, 25);
+			this.tabPage3.Name = "tabPage3";
+			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage3.Size = new System.Drawing.Size(940, 466);
+			this.tabPage3.TabIndex = 4;
+			this.tabPage3.Text = "Reports";
+			this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
+			// 
 			// userLbl
 			// 
 			this.userLbl.AutoSize = true;
@@ -479,153 +670,273 @@ namespace CD_Dealership
 			this.userLbl.TabIndex = 3;
 			this.userLbl.Text = "label1";
 			// 
-			// Add
+			// SO
 			// 
-			this.Add.Controls.Add(this.btn);
-			this.Add.Controls.Add(this.txtID);
-			this.Add.Controls.Add(this.label9);
-			this.Add.Location = new System.Drawing.Point(7, 17);
-			this.Add.Margin = new System.Windows.Forms.Padding(4);
-			this.Add.Name = "Add";
-			this.Add.Padding = new System.Windows.Forms.Padding(4);
-			this.Add.Size = new System.Drawing.Size(267, 165);
-			this.Add.TabIndex = 1;
-			this.Add.TabStop = false;
-			this.Add.Text = "Add";
+			this.SO.FormattingEnabled = true;
+			this.SO.ItemHeight = 16;
+			this.SO.Location = new System.Drawing.Point(16, 40);
+			this.SO.Margin = new System.Windows.Forms.Padding(4);
+			this.SO.Name = "SO";
+			this.SO.Size = new System.Drawing.Size(339, 244);
+			this.SO.TabIndex = 4;
+			this.SO.Tag = "SO";
 			// 
-			// btn
+			// label13
 			// 
-			this.btn.Location = new System.Drawing.Point(81, 85);
-			this.btn.Margin = new System.Windows.Forms.Padding(4);
-			this.btn.Name = "btn";
-			this.btn.Size = new System.Drawing.Size(100, 28);
-			this.btn.TabIndex = 4;
-			this.btn.Text = "Add Inventory";
-			this.btn.UseVisualStyleBackColor = true;
-			this.btn.Click += new System.EventHandler(this.btn_Click);
+			this.label13.AutoSize = true;
+			this.label13.ForeColor = System.Drawing.SystemColors.HotTrack;
+			this.label13.Location = new System.Drawing.Point(13, 22);
+			this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label13.Name = "label13";
+			this.label13.Size = new System.Drawing.Size(124, 17);
+			this.label13.TabIndex = 8;
+			this.label13.Text = "Report in Text-File";
+			this.label13.Click += new System.EventHandler(this.label13_Click);
 			// 
-			// txtID
+			// dateTimePicker1
 			// 
-			this.txtID.Location = new System.Drawing.Point(116, 22);
-			this.txtID.Margin = new System.Windows.Forms.Padding(4);
-			this.txtID.Name = "txtID";
-			this.txtID.Size = new System.Drawing.Size(132, 22);
-			this.txtID.TabIndex = 1;
+			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+			this.dateTimePicker1.Location = new System.Drawing.Point(382, 17);
+			this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
+			this.dateTimePicker1.Name = "dateTimePicker1";
+			this.dateTimePicker1.Size = new System.Drawing.Size(123, 22);
+			this.dateTimePicker1.TabIndex = 9;
+			this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
 			// 
-			// label9
+			// PO
 			// 
-			this.label9.AutoSize = true;
-			this.label9.Location = new System.Drawing.Point(13, 31);
-			this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label9.Name = "label9";
-			this.label9.Size = new System.Drawing.Size(91, 17);
-			this.label9.TabIndex = 0;
-			this.label9.Text = "ID to receive:";
+			this.PO.FormattingEnabled = true;
+			this.PO.ItemHeight = 16;
+			this.PO.Location = new System.Drawing.Point(382, 40);
+			this.PO.Margin = new System.Windows.Forms.Padding(4);
+			this.PO.Name = "PO";
+			this.PO.Size = new System.Drawing.Size(369, 244);
+			this.PO.TabIndex = 10;
+			this.PO.Tag = "PO";
 			// 
-			// dataGridView1
+			// dataGridView3
 			// 
-			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(7, 219);
-			this.dataGridView1.Name = "dataGridView1";
-			this.dataGridView1.RowHeadersWidth = 51;
-			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(267, 208);
-			this.dataGridView1.TabIndex = 2;
+			this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView3.Location = new System.Drawing.Point(355, 219);
+			this.dataGridView3.Name = "dataGridView3";
+			this.dataGridView3.RowHeadersWidth = 51;
+			this.dataGridView3.RowTemplate.Height = 24;
+			this.dataGridView3.Size = new System.Drawing.Size(307, 208);
+			this.dataGridView3.TabIndex = 5;
+			this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
 			// 
-			// groupBox3
+			// tabPage4
 			// 
-			this.groupBox3.Controls.Add(this.button4);
-			this.groupBox3.Controls.Add(this.textBox7);
-			this.groupBox3.Location = new System.Drawing.Point(318, 17);
-			this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
-			this.groupBox3.Name = "groupBox3";
-			this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBox3.Size = new System.Drawing.Size(267, 165);
-			this.groupBox3.TabIndex = 3;
-			this.groupBox3.TabStop = false;
-			this.groupBox3.Text = "Delete";
+			this.tabPage4.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.tabPage4.Controls.Add(this.groupBox6);
+			this.tabPage4.Controls.Add(this.groupBox7);
+			this.tabPage4.Controls.Add(this.groupBox5);
+			this.tabPage4.Controls.Add(this.dataGridView2);
+			this.tabPage4.Location = new System.Drawing.Point(4, 25);
+			this.tabPage4.Name = "tabPage4";
+			this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+			this.tabPage4.Size = new System.Drawing.Size(940, 466);
+			this.tabPage4.TabIndex = 5;
+			this.tabPage4.Text = "Purchase Orders";
 			// 
-			// button4
+			// groupBox7
 			// 
-			this.button4.Location = new System.Drawing.Point(81, 91);
-			this.button4.Margin = new System.Windows.Forms.Padding(4);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(100, 28);
-			this.button4.TabIndex = 5;
-			this.button4.Text = "Delete";
-			this.button4.UseVisualStyleBackColor = true;
-			this.button4.Click += new System.EventHandler(this.button4_Click);
+			this.groupBox7.Controls.Add(this.textBox5);
+			this.groupBox7.Controls.Add(this.label10);
+			this.groupBox7.Controls.Add(this.button3);
+			this.groupBox7.Controls.Add(this.comboBox4);
+			this.groupBox7.Controls.Add(this.label11);
+			this.groupBox7.Controls.Add(this.textBox6);
+			this.groupBox7.Location = new System.Drawing.Point(622, 7);
+			this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+			this.groupBox7.Name = "groupBox7";
+			this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+			this.groupBox7.Size = new System.Drawing.Size(267, 193);
+			this.groupBox7.TabIndex = 20;
+			this.groupBox7.TabStop = false;
+			this.groupBox7.Text = "Update Supplier";
 			// 
-			// textBox7
+			// textBox5
 			// 
-			this.textBox7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.textBox7.Location = new System.Drawing.Point(56, 47);
-			this.textBox7.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox7.Name = "textBox7";
-			this.textBox7.Size = new System.Drawing.Size(155, 22);
-			this.textBox7.TabIndex = 4;
-			this.textBox7.Text = "ID to delete";
+			this.textBox5.Location = new System.Drawing.Point(105, 100);
+			this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(152, 22);
+			this.textBox5.TabIndex = 6;
 			// 
-			// Orders
+			// label10
 			// 
-			this.Orders.AutoSize = true;
-			this.Orders.Location = new System.Drawing.Point(20, 202);
-			this.Orders.Name = "Orders";
-			this.Orders.Size = new System.Drawing.Size(52, 17);
-			this.Orders.TabIndex = 4;
-			this.Orders.Text = "Orders";
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(5, 108);
+			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(77, 17);
+			this.label10.TabIndex = 5;
+			this.label10.Text = "New value:";
 			// 
-			// tabPage3
+			// button3
 			// 
-			this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.tabPage3.Location = new System.Drawing.Point(4, 25);
-			this.tabPage3.Name = "tabPage3";
-			this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-			this.tabPage3.Size = new System.Drawing.Size(940, 466);
-			this.tabPage3.TabIndex = 4;
-			this.tabPage3.Text = "Reports";
+			this.button3.Location = new System.Drawing.Point(83, 149);
+			this.button3.Margin = new System.Windows.Forms.Padding(4);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(124, 28);
+			this.button3.TabIndex = 4;
+			this.button3.Text = "Update";
+			this.button3.UseVisualStyleBackColor = true;
 			// 
-			// otherDepartmentsToolStripMenuItem
+			// comboBox4
 			// 
-			this.otherDepartmentsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.humanResourceToolStripMenuItem,
-            this.salesToolStripMenuItem,
-            this.logisticsToolStripMenuItem,
-            this.clientsToolStripMenuItem});
-			this.otherDepartmentsToolStripMenuItem.Name = "otherDepartmentsToolStripMenuItem";
-			this.otherDepartmentsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.otherDepartmentsToolStripMenuItem.Text = "Other Departments";
+			this.comboBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.comboBox4.FormattingEnabled = true;
+			this.comboBox4.Items.AddRange(new object[] {
+            "Quantity"});
+			this.comboBox4.Location = new System.Drawing.Point(105, 66);
+			this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
+			this.comboBox4.Name = "comboBox4";
+			this.comboBox4.Size = new System.Drawing.Size(152, 24);
+			this.comboBox4.TabIndex = 0;
+			this.comboBox4.Text = "Column to update";
 			// 
-			// humanResourceToolStripMenuItem
+			// label11
 			// 
-			this.humanResourceToolStripMenuItem.Name = "humanResourceToolStripMenuItem";
-			this.humanResourceToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.humanResourceToolStripMenuItem.Text = "Human Resource";
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(59, 43);
+			this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(25, 17);
+			this.label11.TabIndex = 1;
+			this.label11.Tag = "";
+			this.label11.Text = "ID:";
 			// 
-			// salesToolStripMenuItem
+			// textBox6
 			// 
-			this.salesToolStripMenuItem.Name = "salesToolStripMenuItem";
-			this.salesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.salesToolStripMenuItem.Text = "Sales";
+			this.textBox6.Location = new System.Drawing.Point(105, 34);
+			this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(152, 22);
+			this.textBox6.TabIndex = 2;
 			// 
-			// logisticsToolStripMenuItem
+			// button2
 			// 
-			this.logisticsToolStripMenuItem.Name = "logisticsToolStripMenuItem";
-			this.logisticsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.logisticsToolStripMenuItem.Text = "Logistics";
+			this.button2.Location = new System.Drawing.Point(32, 66);
+			this.button2.Margin = new System.Windows.Forms.Padding(4);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(100, 28);
+			this.button2.TabIndex = 19;
+			this.button2.Text = "Delete";
+			this.button2.UseVisualStyleBackColor = true;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
-			// clientsToolStripMenuItem
+			// textBox4
 			// 
-			this.clientsToolStripMenuItem.Name = "clientsToolStripMenuItem";
-			this.clientsToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.clientsToolStripMenuItem.Text = "Clients";
+			this.textBox4.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+			this.textBox4.Location = new System.Drawing.Point(7, 22);
+			this.textBox4.Margin = new System.Windows.Forms.Padding(4);
+			this.textBox4.Name = "textBox4";
+			this.textBox4.Size = new System.Drawing.Size(155, 22);
+			this.textBox4.TabIndex = 18;
+			this.textBox4.Text = "ID to delete";
 			// 
-			// saveAndCloseToolStripMenuItem
+			// groupBox5
 			// 
-			this.saveAndCloseToolStripMenuItem.Name = "saveAndCloseToolStripMenuItem";
-			this.saveAndCloseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-			this.saveAndCloseToolStripMenuItem.Text = "Save and Close";
-			this.saveAndCloseToolStripMenuItem.Click += new System.EventHandler(this.saveAndCloseToolStripMenuItem_Click);
+			this.groupBox5.Controls.Add(this.label12);
+			this.groupBox5.Controls.Add(this.label1);
+			this.groupBox5.Controls.Add(this.button1);
+			this.groupBox5.Controls.Add(this.comboBox5);
+			this.groupBox5.Controls.Add(this.ProdcomboBox);
+			this.groupBox5.Controls.Add(this.textBox3);
+			this.groupBox5.Location = new System.Drawing.Point(16, 7);
+			this.groupBox5.Margin = new System.Windows.Forms.Padding(4);
+			this.groupBox5.Name = "groupBox5";
+			this.groupBox5.Padding = new System.Windows.Forms.Padding(4);
+			this.groupBox5.Size = new System.Drawing.Size(332, 177);
+			this.groupBox5.TabIndex = 17;
+			this.groupBox5.TabStop = false;
+			this.groupBox5.Text = "Add PO";
+			// 
+			// button1
+			// 
+			this.button1.Location = new System.Drawing.Point(88, 123);
+			this.button1.Margin = new System.Windows.Forms.Padding(4);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(100, 28);
+			this.button1.TabIndex = 3;
+			this.button1.Text = "Add Order";
+			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// comboBox5
+			// 
+			this.comboBox5.ForeColor = System.Drawing.SystemColors.WindowFrame;
+			this.comboBox5.FormattingEnabled = true;
+			this.comboBox5.Location = new System.Drawing.Point(189, 79);
+			this.comboBox5.Margin = new System.Windows.Forms.Padding(4);
+			this.comboBox5.Name = "comboBox5";
+			this.comboBox5.Size = new System.Drawing.Size(135, 24);
+			this.comboBox5.TabIndex = 2;
+			this.comboBox5.Text = "Supplier";
+			// 
+			// ProdcomboBox
+			// 
+			this.ProdcomboBox.BackColor = System.Drawing.SystemColors.Window;
+			this.ProdcomboBox.ForeColor = System.Drawing.SystemColors.WindowFrame;
+			this.ProdcomboBox.FormattingEnabled = true;
+			this.ProdcomboBox.Location = new System.Drawing.Point(189, 44);
+			this.ProdcomboBox.Margin = new System.Windows.Forms.Padding(4);
+			this.ProdcomboBox.Name = "ProdcomboBox";
+			this.ProdcomboBox.Size = new System.Drawing.Size(135, 24);
+			this.ProdcomboBox.TabIndex = 1;
+			this.ProdcomboBox.Text = "Vehicle";
+			this.ProdcomboBox.SelectedIndexChanged += new System.EventHandler(this.ProdcomboBox_SelectedIndexChanged);
+			// 
+			// textBox3
+			// 
+			this.textBox3.ForeColor = System.Drawing.SystemColors.WindowFrame;
+			this.textBox3.Location = new System.Drawing.Point(189, 12);
+			this.textBox3.Margin = new System.Windows.Forms.Padding(4);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(135, 22);
+			this.textBox3.TabIndex = 0;
+			this.textBox3.Text = "Quantity";
+			// 
+			// dataGridView2
+			// 
+			this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dataGridView2.Location = new System.Drawing.Point(16, 223);
+			this.dataGridView2.Margin = new System.Windows.Forms.Padding(4);
+			this.dataGridView2.Name = "dataGridView2";
+			this.dataGridView2.RowHeadersWidth = 51;
+			this.dataGridView2.Size = new System.Drawing.Size(864, 281);
+			this.dataGridView2.TabIndex = 16;
+			// 
+			// groupBox6
+			// 
+			this.groupBox6.Controls.Add(this.textBox4);
+			this.groupBox6.Controls.Add(this.button2);
+			this.groupBox6.Location = new System.Drawing.Point(374, 7);
+			this.groupBox6.Name = "groupBox6";
+			this.groupBox6.Size = new System.Drawing.Size(223, 177);
+			this.groupBox6.TabIndex = 21;
+			this.groupBox6.TabStop = false;
+			this.groupBox6.Text = "groupBox6";
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Location = new System.Drawing.Point(18, 17);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(164, 17);
+			this.label1.TabIndex = 4;
+			this.label1.Text = "Add Number of Vehicles:";
+			// 
+			// label12
+			// 
+			this.label12.AutoSize = true;
+			this.label12.Location = new System.Drawing.Point(37, 82);
+			this.label12.Name = "label12";
+			this.label12.Size = new System.Drawing.Size(54, 17);
+			this.label12.TabIndex = 5;
+			this.label12.Text = "label12";
 			// 
 			// CD_Dealership
 			// 
@@ -644,6 +955,11 @@ namespace CD_Dealership
 			this.Inventory.ResumeLayout(false);
 			this.tabPage1.ResumeLayout(false);
 			this.tabPage1.PerformLayout();
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+			this.Add.ResumeLayout(false);
+			this.Add.PerformLayout();
 			this.tabPage2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.dataView)).EndInit();
 			this.groupBox1.ResumeLayout(false);
@@ -652,11 +968,17 @@ namespace CD_Dealership
 			this.groupBox2.PerformLayout();
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
-			this.Add.ResumeLayout(false);
-			this.Add.PerformLayout();
-			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			this.groupBox3.ResumeLayout(false);
-			this.groupBox3.PerformLayout();
+			this.tabPage3.ResumeLayout(false);
+			this.tabPage3.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+			this.tabPage4.ResumeLayout(false);
+			this.groupBox7.ResumeLayout(false);
+			this.groupBox7.PerformLayout();
+			this.groupBox5.ResumeLayout(false);
+			this.groupBox5.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+			this.groupBox6.ResumeLayout(false);
+			this.groupBox6.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -716,5 +1038,29 @@ namespace CD_Dealership
 		private System.Windows.Forms.ToolStripMenuItem clientsToolStripMenuItem;
 		private System.Windows.Forms.Label Orders;
 		private System.Windows.Forms.TabPage tabPage3;
+		private System.Windows.Forms.Label label13;
+		private System.Windows.Forms.ListBox SO;
+		private System.Windows.Forms.DateTimePicker dateTimePicker1;
+		private System.Windows.Forms.ListBox PO;
+		private System.Windows.Forms.DataGridView dataGridView3;
+		private System.Windows.Forms.TabPage tabPage4;
+		private System.Windows.Forms.GroupBox groupBox6;
+		private System.Windows.Forms.TextBox textBox4;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.GroupBox groupBox7;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.ComboBox comboBox4;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.GroupBox groupBox5;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ComboBox comboBox5;
+		private System.Windows.Forms.ComboBox ProdcomboBox;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.DataGridView dataGridView2;
+		private System.Windows.Forms.Label label12;
+		private System.Windows.Forms.Label label1;
 	}
 }

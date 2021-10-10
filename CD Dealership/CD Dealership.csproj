@@ -67,6 +67,18 @@
     <Compile Include="CD_Dealership.Designer.cs">
       <DependentUpon>CD_Dealership.cs</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Client.Designer.cs">
+      <DependentUpon>Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Deliveries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Deliveries.Designer.cs">
+      <DependentUpon>Deliveries.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forget_Password.cs">
       <SubType>Form</SubType>
     </Compile>
