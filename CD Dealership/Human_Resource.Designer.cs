@@ -67,6 +67,7 @@ namespace CD_Dealership
 			this.label12 = new System.Windows.Forms.Label();
 			this.valsearchTxt = new System.Windows.Forms.TextBox();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.userLbl = new System.Windows.Forms.Label();
 			this.employeeGB.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -465,12 +466,22 @@ namespace CD_Dealership
 			this.linkLabel1.Text = "Log Out";
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
 			// 
+			// userLbl
+			// 
+			this.userLbl.AutoSize = true;
+			this.userLbl.Location = new System.Drawing.Point(333, 9);
+			this.userLbl.Name = "userLbl";
+			this.userLbl.Size = new System.Drawing.Size(54, 17);
+			this.userLbl.TabIndex = 6;
+			this.userLbl.Text = "label13";
+			// 
 			// Human_Resource
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(922, 606);
+			this.Controls.Add(this.userLbl);
 			this.Controls.Add(this.linkLabel1);
 			this.Controls.Add(this.groupBox3);
 			this.Controls.Add(this.groupBox2);
@@ -534,5 +545,6 @@ namespace CD_Dealership
 		private System.Windows.Forms.ComboBox searchCombo;
 		private System.Windows.Forms.ComboBox sortcombo;
 		private System.Windows.Forms.LinkLabel linkLabel1;
+		private System.Windows.Forms.Label userLbl;
 	}
 }

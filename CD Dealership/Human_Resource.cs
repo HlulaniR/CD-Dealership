@@ -40,7 +40,7 @@ namespace CD_Dealership
 				return true;
 
 		}
-		public void deleteUser(string deleteQuerry)
+		public void deletedata(string deleteQuerry)
 		{
 			con = new SqlConnection(conStr);
 			con.Open();
@@ -166,8 +166,8 @@ namespace CD_Dealership
 			if (delete == DialogResult.OK)
 			{
 				string del = "DELETE FROM Employees WHERE UserID = '" + textBox1.Text + "'";
-				deleteUser(del);
-				MessageBox.Show(textBox1.Text + "Successfully Deleted");
+				deletedata(del);
+				MessageBox.Show(textBox1.Text + "User is Successfully Deleted");
 				textBox1.Text = string.Empty;
 				readAll(readEmployees);
 			}

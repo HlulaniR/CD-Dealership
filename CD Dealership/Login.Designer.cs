@@ -29,6 +29,7 @@ namespace CD_Dealership
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.usernameTxt = new System.Windows.Forms.TextBox();
@@ -40,7 +41,9 @@ namespace CD_Dealership
 			this.button2 = new System.Windows.Forms.Button();
 			this.showPass = new System.Windows.Forms.Button();
 			this.hideBttn = new System.Windows.Forms.Button();
+			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
 			this.userLbl = new System.Windows.Forms.Label();
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -83,7 +86,7 @@ namespace CD_Dealership
 			// 
 			this.label4.AutoSize = true;
 			this.label4.ForeColor = System.Drawing.Color.Red;
-			this.label4.Location = new System.Drawing.Point(103, 209);
+			this.label4.Location = new System.Drawing.Point(103, 197);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(278, 17);
 			this.label4.TabIndex = 4;
@@ -147,10 +150,14 @@ namespace CD_Dealership
 			this.hideBttn.UseVisualStyleBackColor = true;
 			this.hideBttn.Click += new System.EventHandler(this.button4_Click);
 			// 
+			// errorProvider1
+			// 
+			this.errorProvider1.ContainerControl = this;
+			// 
 			// userLbl
 			// 
 			this.userLbl.AutoSize = true;
-			this.userLbl.Location = new System.Drawing.Point(198, 180);
+			this.userLbl.Location = new System.Drawing.Point(358, 57);
 			this.userLbl.Name = "userLbl";
 			this.userLbl.Size = new System.Drawing.Size(46, 17);
 			this.userLbl.TabIndex = 11;
@@ -178,6 +185,7 @@ namespace CD_Dealership
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Login Form";
 			this.Load += new System.EventHandler(this.Form1_Load);
+			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -196,6 +204,7 @@ namespace CD_Dealership
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button showPass;
 		private System.Windows.Forms.Button hideBttn;
+		private System.Windows.Forms.ErrorProvider errorProvider1;
 		private System.Windows.Forms.Label userLbl;
 	}
 }

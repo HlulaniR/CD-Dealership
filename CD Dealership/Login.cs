@@ -29,7 +29,7 @@ namespace CD_Dealership
 		string conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nhlul\Desktop\223 Project\CD Dealership\CD Dealership\CDManagementDB.mdf;Integrated Security=True";
 		private void Form1_Load(object sender, EventArgs e)
 		{
-
+			userLbl.Visible = false;
 		}
 		public bool authenticate(string userName, string password, ref int user)
 		{
@@ -113,18 +113,20 @@ namespace CD_Dealership
 
 				if (authenticate(usernameTxt.Text, passwordTxt.Text, ref UserID))
 				{
-					//CD_Dealership CD = new CD_Dealership();
+					//CD_Dealership Cd = new CD_Dealership();
 					string[] temp = getUser(readAEmployee, SA.getID("SELECT * FROM Login", usernameTxt.Text)).Split(',');
 
 					if (temp[2] == "Manager")
 					{
 						//CD. .text = "Your are logged in as " + temp[0] + " " + temp[1]; //update
+						CD.userLbl.Text = HR.userLbl.Text = "Your are Logged in as " + temp[0] + " " + temp[1];
 						CD.ShowDialog();
 						this.Close();
 					}
 					else if (temp[2] == "HR")
 					{
-
+						userLbl.Text = "You are Logged in as " +  temp[0] + " " + temp[1];
+						//HR.userL
 						HR.ShowDialog();
 						this.Close();
 					}
@@ -137,6 +139,25 @@ namespace CD_Dealership
 					else if (temp[2] == "Sales Manager")
 					{
 						(new Sales()).ShowDialog();
+					}
+				}
+				else 
+				{
+					if(usernameTxt.Text == "Employee" || usernameTxt.Text == "employee" && passwordTxt.Text =="0000")
+					{
+						//insert a graph to show the stats on our business
+
+						()
+
+					}
+					else 
+					{
+						forgotpassLbl.Visible = true;
+						if (passwordTxt.Text == string.Empty)
+						{
+							label4.Visible = true;
+						}
+						errorProvider1.SetError(passwordTxt, "The password provided is Invalid");
 					}
 				}
 

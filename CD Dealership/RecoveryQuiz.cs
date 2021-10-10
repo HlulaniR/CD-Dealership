@@ -21,5 +21,36 @@ namespace CD_Dealership
 		{
 
 		}
+
+		private void label1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+
+		public bool QuizCreated { get; set; }
+
+		public string getQuiz { get; set; }
+
+		public string getAnswer { get; set; }
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			if(comboBox1.SelectedIndex != 1 || comboBox1.Text != string.Empty)
+			{
+				if(textBox1.Text != string.Empty)
+				{
+					QuizCreated = true;
+					getQuiz = comboBox1.Text;
+					getAnswer = textBox1.Text;
+					this.Close();
+				}
+
+			}
+		}
 	}
 }

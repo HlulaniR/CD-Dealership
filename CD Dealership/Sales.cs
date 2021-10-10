@@ -28,14 +28,14 @@ namespace CD_Dealership
 
 		private string conStr = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nhlul\Downloads\CMPG223_Acer-Logstics-master\Information Management System(Acer Logistics)\ManagementDB.mdf;Integrated Security=True";
 
-		public void addSO(bool status, string querry, int vinID, int OrderID, float quantity)
+		public void addSO(bool status, string querry, int carVin, int OrderID, float quantity)
 		{
 			con.Open();
 			com = new SqlCommand(querry, con);
 
 			com.Parameters.AddWithValue("Quantity", quantity);
 			com.Parameters.AddWithValue("Status", status);
-			com.Parameters.AddWithValue("Vehicle Vin", vinID);
+			com.Parameters.AddWithValue("Vehicle Vin", carVin);
 			com.Parameters.AddWithValue("Order", OrderID);
 			com.ExecuteNonQuery();
 			con.Close();
@@ -43,7 +43,7 @@ namespace CD_Dealership
 		}
 		public int addOrder()
 		{
-			try 
+			try
 			{
 				SU = new SignUp();
 				con = new SqlConnection(conStr);
@@ -54,8 +54,14 @@ namespace CD_Dealership
 				com = new SqlCommand("INSERT INTO Order VALUES(@Date)", con);
 				com.Parameters.AddWithValue("Date", date);
 				com.ExecuteNonQuery();
-				int id = (SU).getID("");
+				con.Close();
+				int id = (SU).getID("SELECT * FROM Order", date.ToString());
 				return id;
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+				return -1;
 			}
 		}
 		public void readAll()
@@ -82,6 +88,14 @@ namespace CD_Dealership
 			con.Open();
 
 			comboBox1.Items.Clear();
+			com = new SqlCommand(readCar, con);
+			dRead = com.ExecuteReader();
+
+			while (dRead.Read())
+			{
+				comboBox1.Items.Add(dRead.GetValue(0) + " " + dRead.GetValue(1));
+			}
+			con.Close();
 
 		}
 
@@ -91,7 +105,7 @@ namespace CD_Dealership
 			string[] car = comboBox1.Text.Split(' ');
 			int id = (new SignUp()).getID("SELECT * FROM Car", car[0] );
 			//add to the Sale_order database
-			string SOquerry = "INSERT INTO Sale_Order VALUES(@Quantity, @Status,)";
+			string SOquerry = "INSERT INTO Sale_Order VALUES(@Quantity, @Status, @CarVin, @Order)";
 			bool status;
 
 
@@ -99,12 +113,12 @@ namespace CD_Dealership
 			{
 				status = true;
 			}
-			else 
-			{
-				status = false;
+			else
+			{ status = false; }
+				
 			
-			}
-
+			
+			//the error here???????debug
 			addSO(SOquerry, float.Parse(qtyTxt.Text), status, id, addOrder());
 			readAll();
 		}
@@ -118,6 +132,31 @@ namespace CD_Dealership
 		{
 			string readCar = "SELECT CarName, Description FROM Car";
 			readVehicle(readCar);
+		}
+
+		private void Sales_Load(object sender, EventArgs e)
+		{
+			readAll();
+			HR = new Human_Resource();
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			HR.deletedata("DELETE FROM Sales_Order WHERE SalesID = '" +  vinIDTxt.Text);
+			readAll();
+		}
+
+		private void groupBox3_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnUpdate_Click(object sender, EventArgs e)
+		{
+			//update the cars that in stock
+			string updateQuerry = "UPDATE Sales_Order SET + " + columnComboBox.Text + "'WHERE SalesID ='" + float.Parse(txtIdUp.Text) + "";
+			HR.update(updateQuerry);
+			readAll();
 		}
 	}
 }

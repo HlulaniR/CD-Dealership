@@ -67,6 +67,12 @@
     <Compile Include="CD_Dealership.Designer.cs">
       <DependentUpon>CD_Dealership.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forget_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forget_Password.Designer.cs">
+      <DependentUpon>Forget_Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Human_Resource.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CD_Dealership.resx">
       <DependentUpon>CD_Dealership.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forget_Password.resx">
+      <DependentUpon>Forget_Password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Human_Resource.resx">
       <DependentUpon>Human_Resource.cs</DependentUpon>

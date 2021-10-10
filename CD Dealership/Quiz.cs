@@ -30,6 +30,14 @@ namespace CD_Dealership
 		private void Quiz_Load(object sender, EventArgs e)
 		{
 			//open up the forget form
+			Forget_Password FP = new Forget_Password();
+			FP.ShowDialog();
+
+			if (search(FP.getNM))
+				lblQuestion.Text = temp[1];
+			else
+				MessageBox.Show("Username not found. Try Again");
+
 
 		}
 
