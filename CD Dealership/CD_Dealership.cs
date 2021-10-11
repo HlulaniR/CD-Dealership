@@ -533,5 +533,15 @@ namespace CD_Dealership
 		{
 			this.Close();
 		}
+
+		private void groupBox6_Enter(object sender, EventArgs e)
+		{
+
+		}
+
+		private void tabPage4_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

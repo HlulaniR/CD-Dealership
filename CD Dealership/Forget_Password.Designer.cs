@@ -77,13 +77,14 @@ namespace CD_Dealership
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-			this.ClientSize = new System.Drawing.Size(400, 195);
+			this.ClientSize = new System.Drawing.Size(341, 170);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "Forget_Password";
 			this.Text = "Forget_Password";
+			this.Load += new System.EventHandler(this.Forget_Password_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

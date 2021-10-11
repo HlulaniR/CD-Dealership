@@ -44,5 +44,10 @@ namespace CD_Dealership
 			getNM = textBox1.Text;
 			this.Close();
 		}
+
+		private void Forget_Password_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

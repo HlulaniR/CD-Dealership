@@ -30,7 +30,7 @@ namespace CD_Dealership
 
 		private void Human_Resource_Load(object sender, EventArgs e)
 		{
-
+			readAll(readEmployees);
 		}
 		public bool validateInput(string input)
 		{

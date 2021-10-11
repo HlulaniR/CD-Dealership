@@ -114,7 +114,9 @@ namespace CD_Dealership
 				status = true;
 			}
 			else
-			{ status = false; }
+			{ 
+				status = false;
+			}
 				
 			
 			
@@ -157,6 +159,11 @@ namespace CD_Dealership
 			string updateQuerry = "UPDATE Sales_Order SET + " + columnComboBox.Text + "'WHERE SalesID ='" + float.Parse(txtIdUp.Text) + "";
 			HR.update(updateQuerry);
 			readAll();
+		}
+
+		private void groupBox1_Enter(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

@@ -135,6 +135,9 @@
     <EmbeddedResource Include="Client.resx">
       <DependentUpon>Client.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Deliveries.resx">
+      <DependentUpon>Deliveries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forget_Password.resx">
       <DependentUpon>Forget_Password.cs</DependentUpon>
     </EmbeddedResource>
