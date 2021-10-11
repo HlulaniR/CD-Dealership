@@ -17,12 +17,12 @@ namespace CD_Dealership
 		{
 			InitializeComponent();
 		}
-		
+		string[] temp;
 		private SqlConnection con;
 		private SqlCommand comm;
 		private SqlDataReader dr;
 
-		string[] temp;
+		
 		private string userNM;
 
 		private string conStr = @" Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Nhlul\Desktop\223 Project\CD Dealership\CD Dealership\CDManagementDB.mdf;Integrated Security=True";
@@ -33,21 +33,26 @@ namespace CD_Dealership
 			Forget_Password FP = new Forget_Password();
 			FP.ShowDialog();
 
-			if (search(FP.getNM))
+			if (searchUser(FP.getNM))
+			{
 				lblQuestion.Text = temp[1];
+			}
+
 			else
-				MessageBox.Show("Username not found. Try Again");
+			{ MessageBox.Show("Username not found. Try Again"); }
 
 
 		}
 
 
-		public bool search(string user)
+		public bool searchUser(string user)
 		{
 			bool found = false;
+			con = new SqlConnection(conStr);
+			con.Open();
 			comm = new SqlCommand("SELECT * FROM Login", con);
 			dr = comm.ExecuteReader();
-			con = new SqlConnection(conStr);
+			
 
 			while (dr.Read())
 			{
@@ -77,9 +82,9 @@ namespace CD_Dealership
 				np.ShowDialog();
 				MessageBox.Show(np.getPass);
 
-				string updateQ = "Update Login SET Password = '" + np.getPass + "'WHERE UserID = ' " + int.Parse(temp[0] + "'");
+				string updateQuerry = "Update Login SET Password = '" + np.getPass + "'WHERE UserID = ' " + int.Parse(temp[0] + "'");
 
-				HR.update(updateQ);
+				HR.update(updateQuerry);
 				MessageBox.Show("Password is successfully created!");
 
 				this.Close();

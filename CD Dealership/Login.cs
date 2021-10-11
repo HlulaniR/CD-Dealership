@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+//Hlulani Rikhotso 30657830
+
+
 namespace CD_Dealership
 {
 	public partial class Login : Form
@@ -119,7 +122,7 @@ namespace CD_Dealership
 					if (temp[2] == "Manager")
 					{
 						//CD. .text = "Your are logged in as " + temp[0] + " " + temp[1]; //update
-						/*CD.userLbl.Text = HR.*/userLbl.Text = "Your are Logged in as " + temp[0] + " " + temp[1];
+						//CD.userLbl.Text = HR.userLbl.Text = "Your are Logged in as " + temp[0] + " " + temp[1];
 						CD.ShowDialog();
 						this.Close();
 					}
