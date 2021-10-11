@@ -105,6 +105,9 @@ namespace CD_Dealership
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label12 = new System.Windows.Forms.Label();
+			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.label14 = new System.Windows.Forms.Label();
+			this.lblProfit = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.Inventory.SuspendLayout();
 			this.tabPage1.SuspendLayout();
@@ -132,8 +135,8 @@ namespace CD_Dealership
 			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
             this.viewToolStripMenuItem,
-            this.editToolStripMenuItem,
-            this.accountToolStripMenuItem});
+            this.accountToolStripMenuItem,
+            this.editToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
 			this.menuStrip1.Size = new System.Drawing.Size(960, 28);
@@ -145,13 +148,13 @@ namespace CD_Dealership
 			this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.saveAndCloseToolStripMenuItem});
 			this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-			this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 21);
+			this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
 			this.fileToolStripMenuItem.Text = "File";
 			// 
 			// saveAndCloseToolStripMenuItem
 			// 
 			this.saveAndCloseToolStripMenuItem.Name = "saveAndCloseToolStripMenuItem";
-			this.saveAndCloseToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+			this.saveAndCloseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.saveAndCloseToolStripMenuItem.Text = "Save and Close";
 			this.saveAndCloseToolStripMenuItem.Click += new System.EventHandler(this.saveAndCloseToolStripMenuItem_Click);
 			// 
@@ -160,7 +163,7 @@ namespace CD_Dealership
 			this.viewToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.otherDepartmentsToolStripMenuItem});
 			this.viewToolStripMenuItem.Name = "viewToolStripMenuItem";
-			this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 21);
+			this.viewToolStripMenuItem.Size = new System.Drawing.Size(55, 24);
 			this.viewToolStripMenuItem.Text = "View";
 			this.viewToolStripMenuItem.Click += new System.EventHandler(this.viewToolStripMenuItem_Click);
 			// 
@@ -206,7 +209,7 @@ namespace CD_Dealership
 			// editToolStripMenuItem
 			// 
 			this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-			this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 21);
+			this.editToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
 			this.editToolStripMenuItem.Text = "Edit";
 			// 
 			// accountToolStripMenuItem
@@ -214,13 +217,13 @@ namespace CD_Dealership
 			this.accountToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.changePasswordToolStripMenuItem});
 			this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-			this.accountToolStripMenuItem.Size = new System.Drawing.Size(77, 21);
+			this.accountToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
 			this.accountToolStripMenuItem.Text = "Account";
 			// 
 			// changePasswordToolStripMenuItem
 			// 
 			this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-			this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+			this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
 			this.changePasswordToolStripMenuItem.Text = "Change Password";
 			this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
 			// 
@@ -239,6 +242,7 @@ namespace CD_Dealership
 			// tabPage1
 			// 
 			this.tabPage1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.tabPage1.Controls.Add(this.label14);
 			this.tabPage1.Controls.Add(this.dataGridView3);
 			this.tabPage1.Controls.Add(this.Orders);
 			this.tabPage1.Controls.Add(this.groupBox3);
@@ -254,7 +258,7 @@ namespace CD_Dealership
 			// Orders
 			// 
 			this.Orders.AutoSize = true;
-			this.Orders.Location = new System.Drawing.Point(20, 202);
+			this.Orders.Location = new System.Drawing.Point(6, 131);
 			this.Orders.Name = "Orders";
 			this.Orders.Size = new System.Drawing.Size(52, 17);
 			this.Orders.TabIndex = 4;
@@ -268,14 +272,14 @@ namespace CD_Dealership
 			this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBox3.Name = "groupBox3";
 			this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBox3.Size = new System.Drawing.Size(267, 165);
+			this.groupBox3.Size = new System.Drawing.Size(267, 107);
 			this.groupBox3.TabIndex = 3;
 			this.groupBox3.TabStop = false;
 			this.groupBox3.Text = "Delete";
 			// 
 			// button4
 			// 
-			this.button4.Location = new System.Drawing.Point(81, 91);
+			this.button4.Location = new System.Drawing.Point(67, 53);
 			this.button4.Margin = new System.Windows.Forms.Padding(4);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(100, 28);
@@ -287,7 +291,7 @@ namespace CD_Dealership
 			// textBox7
 			// 
 			this.textBox7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-			this.textBox7.Location = new System.Drawing.Point(56, 47);
+			this.textBox7.Location = new System.Drawing.Point(91, 23);
 			this.textBox7.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox7.Name = "textBox7";
 			this.textBox7.Size = new System.Drawing.Size(155, 22);
@@ -297,7 +301,7 @@ namespace CD_Dealership
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(7, 219);
+			this.dataGridView1.Location = new System.Drawing.Point(7, 151);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
@@ -313,14 +317,14 @@ namespace CD_Dealership
 			this.Add.Margin = new System.Windows.Forms.Padding(4);
 			this.Add.Name = "Add";
 			this.Add.Padding = new System.Windows.Forms.Padding(4);
-			this.Add.Size = new System.Drawing.Size(267, 165);
+			this.Add.Size = new System.Drawing.Size(267, 107);
 			this.Add.TabIndex = 1;
 			this.Add.TabStop = false;
 			this.Add.Text = "Add";
 			// 
 			// btn
 			// 
-			this.btn.Location = new System.Drawing.Point(81, 85);
+			this.btn.Location = new System.Drawing.Point(73, 53);
 			this.btn.Margin = new System.Windows.Forms.Padding(4);
 			this.btn.Name = "btn";
 			this.btn.Size = new System.Drawing.Size(100, 28);
@@ -649,6 +653,7 @@ namespace CD_Dealership
 			// tabPage3
 			// 
 			this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.tabPage3.Controls.Add(this.lblProfit);
 			this.tabPage3.Controls.Add(this.PO);
 			this.tabPage3.Controls.Add(this.dateTimePicker1);
 			this.tabPage3.Controls.Add(this.label13);
@@ -717,11 +722,11 @@ namespace CD_Dealership
 			// dataGridView3
 			// 
 			this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView3.Location = new System.Drawing.Point(355, 219);
+			this.dataGridView3.Location = new System.Drawing.Point(318, 151);
 			this.dataGridView3.Name = "dataGridView3";
 			this.dataGridView3.RowHeadersWidth = 51;
 			this.dataGridView3.RowTemplate.Height = 24;
-			this.dataGridView3.Size = new System.Drawing.Size(307, 208);
+			this.dataGridView3.Size = new System.Drawing.Size(267, 208);
 			this.dataGridView3.TabIndex = 5;
 			this.dataGridView3.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView3_CellContentClick);
 			// 
@@ -783,6 +788,7 @@ namespace CD_Dealership
 			this.button3.TabIndex = 4;
 			this.button3.Text = "Update";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// comboBox4
 			// 
@@ -932,17 +938,47 @@ namespace CD_Dealership
 			// label12
 			// 
 			this.label12.AutoSize = true;
-			this.label12.Location = new System.Drawing.Point(37, 82);
+			this.label12.Location = new System.Drawing.Point(77, 82);
 			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(54, 17);
+			this.label12.Size = new System.Drawing.Size(105, 17);
 			this.label12.TabIndex = 5;
-			this.label12.Text = "label12";
+			this.label12.Text = "Supplier Name:";
+			// 
+			// linkLabel1
+			// 
+			this.linkLabel1.AutoSize = true;
+			this.linkLabel1.Location = new System.Drawing.Point(804, 9);
+			this.linkLabel1.Name = "linkLabel1";
+			this.linkLabel1.Size = new System.Drawing.Size(55, 17);
+			this.linkLabel1.TabIndex = 4;
+			this.linkLabel1.TabStop = true;
+			this.linkLabel1.Text = "Log Off";
+			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+			// 
+			// label14
+			// 
+			this.label14.AutoSize = true;
+			this.label14.Location = new System.Drawing.Point(341, 131);
+			this.label14.Name = "label14";
+			this.label14.Size = new System.Drawing.Size(124, 17);
+			this.label14.TabIndex = 6;
+			this.label14.Text = "Inventory on Hand";
+			// 
+			// lblProfit
+			// 
+			this.lblProfit.AutoSize = true;
+			this.lblProfit.Location = new System.Drawing.Point(344, 315);
+			this.lblProfit.Name = "lblProfit";
+			this.lblProfit.Size = new System.Drawing.Size(54, 17);
+			this.lblProfit.TabIndex = 11;
+			this.lblProfit.Text = "label15";
 			// 
 			// CD_Dealership
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(960, 540);
+			this.Controls.Add(this.linkLabel1);
 			this.Controls.Add(this.userLbl);
 			this.Controls.Add(this.Inventory);
 			this.Controls.Add(this.menuStrip1);
@@ -1062,5 +1098,8 @@ namespace CD_Dealership
 		private System.Windows.Forms.DataGridView dataGridView2;
 		private System.Windows.Forms.Label label12;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.LinkLabel linkLabel1;
+		private System.Windows.Forms.Label label14;
+		private System.Windows.Forms.Label lblProfit;
 	}
 }

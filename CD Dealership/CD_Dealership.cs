@@ -455,6 +455,7 @@ namespace CD_Dealership
 			readSO(readSONotdelivered);
 			readPO(readPONotDel);
 			readAll();
+			lblProfit.Text = "PROFIT MADE FOR THiS TIME PERIOD: R" + (totalSales - totalOrders);
 		}
 
 		private void tabPage3_Click(object sender, EventArgs e)
@@ -480,6 +481,19 @@ namespace CD_Dealership
 			}
 
 		}
+		public void addPO(string querry, float qty, int OrderID, int prodID, int SuppID)
+		{
+			con.Open();
+			comm = new SqlCommand(querry, con);
+			comm.Parameters.AddWithValue("Received", "False");
+			comm.Parameters.AddWithValue("Quantity", qty);
+			comm.Parameters.AddWithValue("OrderID", OrderID);
+			comm.Parameters.AddWithValue("VehicleID", prodID);
+			comm.Parameters.AddWithValue("SupplierID", SuppID);
+			comm.ExecuteNonQuery();
+			con.Close();
+			MessageBox.Show("Purchase Order Added");
+		}
 
 		private void button1_Click(object sender, EventArgs e)
 		{
@@ -491,7 +505,7 @@ namespace CD_Dealership
 			int prodID = CA.getID("SELECT * FROM Vehicle", vehicle[0]);
 			int supID = CA.getID("SELECT * FROM Supplier", suppier[0]);
 			
-			string add = "INSERT INTO SupplyVehicle VALUES(@Received, @Quantity, @OrderID, @Product_ID, @Supplier_ID)";
+			string add = "INSERT INTO SupplyVehicle VALUES(@Received, @Quantity, @OrderID, @VehicleID, @SupplierID)";
 			addPO(add, qty, (new Sales()).addOrder(), prodID, supID);
 			readAll();
 		}
@@ -499,6 +513,25 @@ namespace CD_Dealership
 		private void ProdcomboBox_SelectedIndexChanged(object sender, EventArgs e)
 		{
 
+		}
+
+		private void button3_Click(object sender, EventArgs e)
+		{
+			try
+			{
+				string updateSupplier = "UPDATE SupplyVehicle SET " + comboBox4.Text + " = '" + textBox5.Text + "' WHERE SupplierVehicleID = '" + int.Parse(textBox6.Text) + "'";
+				(new Human_Resource()).update(updateSupplier);
+				readAll();
+			}
+			catch (Exception ex)
+			{
+				MessageBox.Show(ex.Message);
+			}
+		}
+
+		private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+		{
+			this.Close();
 		}
 	}
 }
