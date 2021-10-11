@@ -33,7 +33,7 @@ namespace CD_Dealership
 			this.label1 = new System.Windows.Forms.Label();
 			this.quizAnswer = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lblQuestion = new System.Windows.Forms.Label();
 			this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
 			this.SuspendLayout();
@@ -67,14 +67,14 @@ namespace CD_Dealership
 			this.button1.UseVisualStyleBackColor = true;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
-			// label2
+			// lblQuestion
 			// 
-			this.label2.AutoSize = true;
-			this.label2.Location = new System.Drawing.Point(49, 50);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(46, 17);
-			this.label2.TabIndex = 3;
-			this.label2.Text = "label2";
+			this.lblQuestion.AutoSize = true;
+			this.lblQuestion.Location = new System.Drawing.Point(49, 50);
+			this.lblQuestion.Name = "lblQuestion";
+			this.lblQuestion.Size = new System.Drawing.Size(46, 17);
+			this.lblQuestion.TabIndex = 3;
+			this.lblQuestion.Text = "label2";
 			// 
 			// errorProvider1
 			// 
@@ -86,7 +86,7 @@ namespace CD_Dealership
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.ClientSize = new System.Drawing.Size(308, 123);
-			this.Controls.Add(this.label2);
+			this.Controls.Add(this.lblQuestion);
 			this.Controls.Add(this.button1);
 			this.Controls.Add(this.quizAnswer);
 			this.Controls.Add(this.label1);
@@ -104,7 +104,7 @@ namespace CD_Dealership
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox quizAnswer;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblQuestion;
 		private System.Windows.Forms.ErrorProvider errorProvider1;
 	}
 }

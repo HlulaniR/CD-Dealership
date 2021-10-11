@@ -121,7 +121,7 @@ namespace CD_Dealership
 			
 			
 			//the error here???????debug
-			addSO(SOquerry, float.Parse(qtyTxt.Text), status, id, addOrder());
+			//addSO(SOquerry, float.Parse(qtyTxt.Text), status, id, addOrder());
 			readAll();
 		}
 

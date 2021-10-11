@@ -119,7 +119,7 @@ namespace CD_Dealership
 					if (temp[2] == "Manager")
 					{
 						//CD. .text = "Your are logged in as " + temp[0] + " " + temp[1]; //update
-						CD.userLbl.Text = HR.userLbl.Text = "Your are Logged in as " + temp[0] + " " + temp[1];
+						/*CD.userLbl.Text = HR.*/userLbl.Text = "Your are Logged in as " + temp[0] + " " + temp[1];
 						CD.ShowDialog();
 						this.Close();
 					}
@@ -132,7 +132,7 @@ namespace CD_Dealership
 					}
 					else if (temp[2] == "Admin")
 					{
-						
+						/*userLbl.Text = HR.*/userLbl.Text = "You are Logged in as " + temp[0] + " " + temp[1];
 						CD.ShowDialog();
 						this.Close();
 					}
@@ -147,7 +147,7 @@ namespace CD_Dealership
 					{
 						//insert a graph to show the stats on our business
 
-						()
+						(new Results()).ShowDialog();
 
 					}
 					else 

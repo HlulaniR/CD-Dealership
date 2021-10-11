@@ -70,10 +70,10 @@ namespace CD_Dealership
 
 
 		}
-		public void addNew(string quiery, string FN, string LN, char Gender, string PN, string Email, string Address)
+		public void addNew(string querry, string FN, string LN, char Gender, string PN, string Email, string Address)
 		{
 			con.Open();
-			comm = new SqlCommand(quiery, con);
+			comm = new SqlCommand(querry, con);
 			comm.Parameters.Add("FirstName", FN);
 			comm.Parameters.Add("LastName", LN);
 			comm.Parameters.Add("Gender", Gender);
@@ -82,7 +82,7 @@ namespace CD_Dealership
 			comm.Parameters.Add("Address", Address);
 			comm.ExecuteNonQuery();
 			con.Close();
-			MessageBox.Show("New supplier added");
+			MessageBox.Show("New Supplier added");
 		}
 
 		private void btnAdd_Click(object sender, EventArgs e)

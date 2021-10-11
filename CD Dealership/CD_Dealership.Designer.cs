@@ -46,13 +46,6 @@ namespace CD_Dealership
 			this.groupBox6 = new System.Windows.Forms.GroupBox();
 			this.textBox4 = new System.Windows.Forms.TextBox();
 			this.button2 = new System.Windows.Forms.Button();
-			this.groupBox7 = new System.Windows.Forms.GroupBox();
-			this.textBox5 = new System.Windows.Forms.TextBox();
-			this.label10 = new System.Windows.Forms.Label();
-			this.button3 = new System.Windows.Forms.Button();
-			this.comboBox4 = new System.Windows.Forms.ComboBox();
-			this.label11 = new System.Windows.Forms.Label();
-			this.textBox6 = new System.Windows.Forms.TextBox();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.label12 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
@@ -108,11 +101,18 @@ namespace CD_Dealership
 			this.SO = new System.Windows.Forms.ListBox();
 			this.userLbl = new System.Windows.Forms.Label();
 			this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+			this.textBox6 = new System.Windows.Forms.TextBox();
+			this.label11 = new System.Windows.Forms.Label();
+			this.comboBox4 = new System.Windows.Forms.ComboBox();
+			this.button3 = new System.Windows.Forms.Button();
+			this.label10 = new System.Windows.Forms.Label();
+			this.textBox5 = new System.Windows.Forms.TextBox();
+			this.groupBox7 = new System.Windows.Forms.GroupBox();
+			this.label15 = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.Inventory.SuspendLayout();
 			this.tabPage4.SuspendLayout();
 			this.groupBox6.SuspendLayout();
-			this.groupBox7.SuspendLayout();
 			this.groupBox5.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
 			this.tabPage1.SuspendLayout();
@@ -126,6 +126,7 @@ namespace CD_Dealership
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			this.tabPage3.SuspendLayout();
+			this.groupBox7.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// menuStrip1
@@ -263,7 +264,7 @@ namespace CD_Dealership
 			this.groupBox6.Size = new System.Drawing.Size(223, 177);
 			this.groupBox6.TabIndex = 21;
 			this.groupBox6.TabStop = false;
-			this.groupBox6.Text = "groupBox6";
+			this.groupBox6.Text = "Delete PO";
 			this.groupBox6.Enter += new System.EventHandler(this.groupBox6_Enter);
 			// 
 			// textBox4
@@ -286,84 +287,6 @@ namespace CD_Dealership
 			this.button2.Text = "Delete";
 			this.button2.UseVisualStyleBackColor = true;
 			this.button2.Click += new System.EventHandler(this.button2_Click);
-			// 
-			// groupBox7
-			// 
-			this.groupBox7.Controls.Add(this.textBox5);
-			this.groupBox7.Controls.Add(this.label10);
-			this.groupBox7.Controls.Add(this.button3);
-			this.groupBox7.Controls.Add(this.comboBox4);
-			this.groupBox7.Controls.Add(this.label11);
-			this.groupBox7.Controls.Add(this.textBox6);
-			this.groupBox7.Location = new System.Drawing.Point(622, 7);
-			this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
-			this.groupBox7.Name = "groupBox7";
-			this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBox7.Size = new System.Drawing.Size(267, 193);
-			this.groupBox7.TabIndex = 20;
-			this.groupBox7.TabStop = false;
-			this.groupBox7.Text = "Update Supplier";
-			// 
-			// textBox5
-			// 
-			this.textBox5.Location = new System.Drawing.Point(105, 100);
-			this.textBox5.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox5.Name = "textBox5";
-			this.textBox5.Size = new System.Drawing.Size(152, 22);
-			this.textBox5.TabIndex = 6;
-			// 
-			// label10
-			// 
-			this.label10.AutoSize = true;
-			this.label10.Location = new System.Drawing.Point(5, 108);
-			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label10.Name = "label10";
-			this.label10.Size = new System.Drawing.Size(77, 17);
-			this.label10.TabIndex = 5;
-			this.label10.Text = "New value:";
-			// 
-			// button3
-			// 
-			this.button3.Location = new System.Drawing.Point(83, 149);
-			this.button3.Margin = new System.Windows.Forms.Padding(4);
-			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(124, 28);
-			this.button3.TabIndex = 4;
-			this.button3.Text = "Update";
-			this.button3.UseVisualStyleBackColor = true;
-			this.button3.Click += new System.EventHandler(this.button3_Click);
-			// 
-			// comboBox4
-			// 
-			this.comboBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
-			this.comboBox4.FormattingEnabled = true;
-			this.comboBox4.Items.AddRange(new object[] {
-            "Quantity"});
-			this.comboBox4.Location = new System.Drawing.Point(105, 66);
-			this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
-			this.comboBox4.Name = "comboBox4";
-			this.comboBox4.Size = new System.Drawing.Size(152, 24);
-			this.comboBox4.TabIndex = 0;
-			this.comboBox4.Text = "Column to update";
-			// 
-			// label11
-			// 
-			this.label11.AutoSize = true;
-			this.label11.Location = new System.Drawing.Point(59, 43);
-			this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label11.Name = "label11";
-			this.label11.Size = new System.Drawing.Size(25, 17);
-			this.label11.TabIndex = 1;
-			this.label11.Tag = "";
-			this.label11.Text = "ID:";
-			// 
-			// textBox6
-			// 
-			this.textBox6.Location = new System.Drawing.Point(105, 34);
-			this.textBox6.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox6.Name = "textBox6";
-			this.textBox6.Size = new System.Drawing.Size(152, 22);
-			this.textBox6.TabIndex = 2;
 			// 
 			// groupBox5
 			// 
@@ -889,6 +812,7 @@ namespace CD_Dealership
 			// tabPage3
 			// 
 			this.tabPage3.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.tabPage3.Controls.Add(this.label15);
 			this.tabPage3.Controls.Add(this.lblProfit);
 			this.tabPage3.Controls.Add(this.PO);
 			this.tabPage3.Controls.Add(this.dateTimePicker1);
@@ -925,7 +849,7 @@ namespace CD_Dealership
 			// dateTimePicker1
 			// 
 			this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-			this.dateTimePicker1.Location = new System.Drawing.Point(382, 17);
+			this.dateTimePicker1.Location = new System.Drawing.Point(557, 10);
 			this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
 			this.dateTimePicker1.Name = "dateTimePicker1";
 			this.dateTimePicker1.Size = new System.Drawing.Size(123, 22);
@@ -975,6 +899,93 @@ namespace CD_Dealership
 			this.linkLabel1.Text = "Log Off";
 			this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
 			// 
+			// textBox6
+			// 
+			this.textBox6.Location = new System.Drawing.Point(105, 34);
+			this.textBox6.Margin = new System.Windows.Forms.Padding(4);
+			this.textBox6.Name = "textBox6";
+			this.textBox6.Size = new System.Drawing.Size(152, 22);
+			this.textBox6.TabIndex = 2;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(59, 43);
+			this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(25, 17);
+			this.label11.TabIndex = 1;
+			this.label11.Tag = "";
+			this.label11.Text = "ID:";
+			// 
+			// comboBox4
+			// 
+			this.comboBox4.ForeColor = System.Drawing.SystemColors.ScrollBar;
+			this.comboBox4.FormattingEnabled = true;
+			this.comboBox4.Items.AddRange(new object[] {
+            "Quantity"});
+			this.comboBox4.Location = new System.Drawing.Point(105, 66);
+			this.comboBox4.Margin = new System.Windows.Forms.Padding(4);
+			this.comboBox4.Name = "comboBox4";
+			this.comboBox4.Size = new System.Drawing.Size(152, 24);
+			this.comboBox4.TabIndex = 0;
+			this.comboBox4.Text = "Column to update";
+			// 
+			// button3
+			// 
+			this.button3.Location = new System.Drawing.Point(83, 149);
+			this.button3.Margin = new System.Windows.Forms.Padding(4);
+			this.button3.Name = "button3";
+			this.button3.Size = new System.Drawing.Size(124, 28);
+			this.button3.TabIndex = 4;
+			this.button3.Text = "Update";
+			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.button3_Click);
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(5, 108);
+			this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(77, 17);
+			this.label10.TabIndex = 5;
+			this.label10.Text = "New value:";
+			// 
+			// textBox5
+			// 
+			this.textBox5.Location = new System.Drawing.Point(105, 100);
+			this.textBox5.Margin = new System.Windows.Forms.Padding(4);
+			this.textBox5.Name = "textBox5";
+			this.textBox5.Size = new System.Drawing.Size(152, 22);
+			this.textBox5.TabIndex = 6;
+			// 
+			// groupBox7
+			// 
+			this.groupBox7.Controls.Add(this.textBox5);
+			this.groupBox7.Controls.Add(this.label10);
+			this.groupBox7.Controls.Add(this.button3);
+			this.groupBox7.Controls.Add(this.comboBox4);
+			this.groupBox7.Controls.Add(this.label11);
+			this.groupBox7.Controls.Add(this.textBox6);
+			this.groupBox7.Location = new System.Drawing.Point(622, 7);
+			this.groupBox7.Margin = new System.Windows.Forms.Padding(4);
+			this.groupBox7.Name = "groupBox7";
+			this.groupBox7.Padding = new System.Windows.Forms.Padding(4);
+			this.groupBox7.Size = new System.Drawing.Size(267, 193);
+			this.groupBox7.TabIndex = 20;
+			this.groupBox7.TabStop = false;
+			this.groupBox7.Text = "Update Supplier";
+			// 
+			// label15
+			// 
+			this.label15.AutoSize = true;
+			this.label15.Location = new System.Drawing.Point(379, 15);
+			this.label15.Name = "label15";
+			this.label15.Size = new System.Drawing.Size(157, 17);
+			this.label15.TabIndex = 12;
+			this.label15.Text = "Customize Time Period:";
+			// 
 			// CD_Dealership
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -994,8 +1005,6 @@ namespace CD_Dealership
 			this.tabPage4.ResumeLayout(false);
 			this.groupBox6.ResumeLayout(false);
 			this.groupBox6.PerformLayout();
-			this.groupBox7.ResumeLayout(false);
-			this.groupBox7.PerformLayout();
 			this.groupBox5.ResumeLayout(false);
 			this.groupBox5.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
@@ -1017,6 +1026,8 @@ namespace CD_Dealership
 			this.groupBox4.PerformLayout();
 			this.tabPage3.ResumeLayout(false);
 			this.tabPage3.PerformLayout();
+			this.groupBox7.ResumeLayout(false);
+			this.groupBox7.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -1085,13 +1096,6 @@ namespace CD_Dealership
 		private System.Windows.Forms.GroupBox groupBox6;
 		private System.Windows.Forms.TextBox textBox4;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.GroupBox groupBox7;
-		private System.Windows.Forms.TextBox textBox5;
-		private System.Windows.Forms.Label label10;
-		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.ComboBox comboBox4;
-		private System.Windows.Forms.Label label11;
-		private System.Windows.Forms.TextBox textBox6;
 		private System.Windows.Forms.GroupBox groupBox5;
 		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ComboBox comboBox5;
@@ -1103,5 +1107,13 @@ namespace CD_Dealership
 		private System.Windows.Forms.LinkLabel linkLabel1;
 		private System.Windows.Forms.Label label14;
 		private System.Windows.Forms.Label lblProfit;
+		private System.Windows.Forms.GroupBox groupBox7;
+		private System.Windows.Forms.TextBox textBox5;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Button button3;
+		private System.Windows.Forms.ComboBox comboBox4;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.TextBox textBox6;
+		private System.Windows.Forms.Label label15;
 	}
 }
