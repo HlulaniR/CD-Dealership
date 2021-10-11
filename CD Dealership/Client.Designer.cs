@@ -34,10 +34,10 @@ namespace CD_Dealership
 			this.SortcomboBox = new System.Windows.Forms.ComboBox();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.btnDelete = new System.Windows.Forms.Button();
-			this.textBox1 = new System.Windows.Forms.TextBox();
+			this.deleteTxt = new System.Windows.Forms.TextBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.groupBox2 = new System.Windows.Forms.GroupBox();
-			this.txtNewVal = new System.Windows.Forms.TextBox();
+			this.newValTxt = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.btnUpdate = new System.Windows.Forms.Button();
 			this.columnComboBox = new System.Windows.Forms.ComboBox();
@@ -45,11 +45,11 @@ namespace CD_Dealership
 			this.txtIdUp = new System.Windows.Forms.TextBox();
 			this.groupBox4 = new System.Windows.Forms.GroupBox();
 			this.btnAdd = new System.Windows.Forms.Button();
-			this.txtAddress = new System.Windows.Forms.TextBox();
+			this.addressTxt = new System.Windows.Forms.TextBox();
 			this.txtPN = new System.Windows.Forms.TextBox();
-			this.txtEmail = new System.Windows.Forms.TextBox();
-			this.txtSurname = new System.Windows.Forms.TextBox();
-			this.txtName = new System.Windows.Forms.TextBox();
+			this.emailTxt = new System.Windows.Forms.TextBox();
+			this.surnameTxt = new System.Windows.Forms.TextBox();
+			this.nameTxt = new System.Windows.Forms.TextBox();
 			this.FRadioButton = new System.Windows.Forms.RadioButton();
 			this.MRadioButton = new System.Windows.Forms.RadioButton();
 			this.label7 = new System.Windows.Forms.Label();
@@ -58,16 +58,22 @@ namespace CD_Dealership
 			this.label8 = new System.Windows.Forms.Label();
 			this.lblFN = new System.Windows.Forms.Label();
 			this.dataView = new System.Windows.Forms.DataGridView();
+			this.label1 = new System.Windows.Forms.Label();
+			this.groupBox3 = new System.Windows.Forms.GroupBox();
+			this.label9 = new System.Windows.Forms.Label();
+			this.label10 = new System.Windows.Forms.Label();
+			this.label11 = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
 			this.groupBox2.SuspendLayout();
 			this.groupBox4.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataView)).BeginInit();
+			this.groupBox3.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// textBox2
 			// 
 			this.textBox2.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-			this.textBox2.Location = new System.Drawing.Point(593, 270);
+			this.textBox2.Location = new System.Drawing.Point(128, 86);
 			this.textBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(151, 22);
@@ -80,17 +86,16 @@ namespace CD_Dealership
 			this.comboBox2.FormattingEnabled = true;
 			this.comboBox2.Items.AddRange(new object[] {
             "Id",
-            "First name ",
-            "Last name",
+            "FirstName ",
+            "LastName",
             "Email",
-            "Phone number",
+            "Phone_No",
             "Address"});
-			this.comboBox2.Location = new System.Drawing.Point(458, 270);
+			this.comboBox2.Location = new System.Drawing.Point(128, 54);
 			this.comboBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.comboBox2.Name = "comboBox2";
-			this.comboBox2.Size = new System.Drawing.Size(124, 24);
+			this.comboBox2.Size = new System.Drawing.Size(151, 24);
 			this.comboBox2.TabIndex = 31;
-			this.comboBox2.Text = "Search by";
 			// 
 			// SortcomboBox
 			// 
@@ -98,25 +103,24 @@ namespace CD_Dealership
 			this.SortcomboBox.ForeColor = System.Drawing.SystemColors.ButtonShadow;
 			this.SortcomboBox.FormattingEnabled = true;
 			this.SortcomboBox.Items.AddRange(new object[] {
-            "Firstname",
+            "FirstName",
             "LastName"});
-			this.SortcomboBox.Location = new System.Drawing.Point(289, 270);
+			this.SortcomboBox.Location = new System.Drawing.Point(127, 22);
 			this.SortcomboBox.Margin = new System.Windows.Forms.Padding(4);
 			this.SortcomboBox.Name = "SortcomboBox";
-			this.SortcomboBox.Size = new System.Drawing.Size(131, 24);
+			this.SortcomboBox.Size = new System.Drawing.Size(152, 24);
 			this.SortcomboBox.TabIndex = 30;
-			this.SortcomboBox.Text = "Sort by";
 			// 
 			// groupBox1
 			// 
 			this.groupBox1.Controls.Add(this.btnDelete);
-			this.groupBox1.Controls.Add(this.textBox1);
+			this.groupBox1.Controls.Add(this.deleteTxt);
 			this.groupBox1.Controls.Add(this.label3);
-			this.groupBox1.Location = new System.Drawing.Point(564, 13);
+			this.groupBox1.Location = new System.Drawing.Point(578, 57);
 			this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBox1.Size = new System.Drawing.Size(267, 199);
+			this.groupBox1.Size = new System.Drawing.Size(267, 182);
 			this.groupBox1.TabIndex = 29;
 			this.groupBox1.TabStop = false;
 			this.groupBox1.Text = "Delete Supplier";
@@ -130,14 +134,15 @@ namespace CD_Dealership
 			this.btnDelete.TabIndex = 2;
 			this.btnDelete.Text = "Delete";
 			this.btnDelete.UseVisualStyleBackColor = true;
+			this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 			// 
-			// textBox1
+			// deleteTxt
 			// 
-			this.textBox1.Location = new System.Drawing.Point(81, 38);
-			this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(132, 22);
-			this.textBox1.TabIndex = 1;
+			this.deleteTxt.Location = new System.Drawing.Point(81, 38);
+			this.deleteTxt.Margin = new System.Windows.Forms.Padding(4);
+			this.deleteTxt.Name = "deleteTxt";
+			this.deleteTxt.Size = new System.Drawing.Size(132, 22);
+			this.deleteTxt.TabIndex = 1;
 			// 
 			// label3
 			// 
@@ -151,28 +156,28 @@ namespace CD_Dealership
 			// 
 			// groupBox2
 			// 
-			this.groupBox2.Controls.Add(this.txtNewVal);
+			this.groupBox2.Controls.Add(this.newValTxt);
 			this.groupBox2.Controls.Add(this.label2);
 			this.groupBox2.Controls.Add(this.btnUpdate);
 			this.groupBox2.Controls.Add(this.columnComboBox);
 			this.groupBox2.Controls.Add(this.label4);
 			this.groupBox2.Controls.Add(this.txtIdUp);
-			this.groupBox2.Location = new System.Drawing.Point(288, 12);
+			this.groupBox2.Location = new System.Drawing.Point(302, 56);
 			this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBox2.Name = "groupBox2";
 			this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-			this.groupBox2.Size = new System.Drawing.Size(267, 201);
+			this.groupBox2.Size = new System.Drawing.Size(267, 183);
 			this.groupBox2.TabIndex = 28;
 			this.groupBox2.TabStop = false;
 			this.groupBox2.Text = "Update Supplier";
 			// 
-			// txtNewVal
+			// newValTxt
 			// 
-			this.txtNewVal.Location = new System.Drawing.Point(105, 100);
-			this.txtNewVal.Margin = new System.Windows.Forms.Padding(4);
-			this.txtNewVal.Name = "txtNewVal";
-			this.txtNewVal.Size = new System.Drawing.Size(152, 22);
-			this.txtNewVal.TabIndex = 6;
+			this.newValTxt.Location = new System.Drawing.Point(105, 100);
+			this.newValTxt.Margin = new System.Windows.Forms.Padding(4);
+			this.newValTxt.Name = "newValTxt";
+			this.newValTxt.Size = new System.Drawing.Size(152, 22);
+			this.newValTxt.TabIndex = 6;
 			// 
 			// label2
 			// 
@@ -186,13 +191,14 @@ namespace CD_Dealership
 			// 
 			// btnUpdate
 			// 
-			this.btnUpdate.Location = new System.Drawing.Point(75, 154);
+			this.btnUpdate.Location = new System.Drawing.Point(62, 136);
 			this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
 			this.btnUpdate.Name = "btnUpdate";
 			this.btnUpdate.Size = new System.Drawing.Size(124, 28);
 			this.btnUpdate.TabIndex = 4;
 			this.btnUpdate.Text = "Update";
 			this.btnUpdate.UseVisualStyleBackColor = true;
+			this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
 			// 
 			// columnComboBox
 			// 
@@ -234,11 +240,11 @@ namespace CD_Dealership
 			// groupBox4
 			// 
 			this.groupBox4.Controls.Add(this.btnAdd);
-			this.groupBox4.Controls.Add(this.txtAddress);
+			this.groupBox4.Controls.Add(this.addressTxt);
 			this.groupBox4.Controls.Add(this.txtPN);
-			this.groupBox4.Controls.Add(this.txtEmail);
-			this.groupBox4.Controls.Add(this.txtSurname);
-			this.groupBox4.Controls.Add(this.txtName);
+			this.groupBox4.Controls.Add(this.emailTxt);
+			this.groupBox4.Controls.Add(this.surnameTxt);
+			this.groupBox4.Controls.Add(this.nameTxt);
 			this.groupBox4.Controls.Add(this.FRadioButton);
 			this.groupBox4.Controls.Add(this.MRadioButton);
 			this.groupBox4.Controls.Add(this.label7);
@@ -246,7 +252,7 @@ namespace CD_Dealership
 			this.groupBox4.Controls.Add(this.label5);
 			this.groupBox4.Controls.Add(this.label8);
 			this.groupBox4.Controls.Add(this.lblFN);
-			this.groupBox4.Location = new System.Drawing.Point(13, 13);
+			this.groupBox4.Location = new System.Drawing.Point(27, 57);
 			this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
 			this.groupBox4.Name = "groupBox4";
 			this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
@@ -266,13 +272,13 @@ namespace CD_Dealership
 			this.btnAdd.UseVisualStyleBackColor = true;
 			this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 			// 
-			// txtAddress
+			// addressTxt
 			// 
-			this.txtAddress.Location = new System.Drawing.Point(125, 187);
-			this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
-			this.txtAddress.Name = "txtAddress";
-			this.txtAddress.Size = new System.Drawing.Size(132, 22);
-			this.txtAddress.TabIndex = 11;
+			this.addressTxt.Location = new System.Drawing.Point(125, 187);
+			this.addressTxt.Margin = new System.Windows.Forms.Padding(4);
+			this.addressTxt.Name = "addressTxt";
+			this.addressTxt.Size = new System.Drawing.Size(132, 22);
+			this.addressTxt.TabIndex = 11;
 			// 
 			// txtPN
 			// 
@@ -282,29 +288,29 @@ namespace CD_Dealership
 			this.txtPN.Size = new System.Drawing.Size(132, 22);
 			this.txtPN.TabIndex = 10;
 			// 
-			// txtEmail
+			// emailTxt
 			// 
-			this.txtEmail.Location = new System.Drawing.Point(125, 126);
-			this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-			this.txtEmail.Name = "txtEmail";
-			this.txtEmail.Size = new System.Drawing.Size(132, 22);
-			this.txtEmail.TabIndex = 9;
+			this.emailTxt.Location = new System.Drawing.Point(125, 126);
+			this.emailTxt.Margin = new System.Windows.Forms.Padding(4);
+			this.emailTxt.Name = "emailTxt";
+			this.emailTxt.Size = new System.Drawing.Size(132, 22);
+			this.emailTxt.TabIndex = 9;
 			// 
-			// txtSurname
+			// surnameTxt
 			// 
-			this.txtSurname.Location = new System.Drawing.Point(125, 55);
-			this.txtSurname.Margin = new System.Windows.Forms.Padding(4);
-			this.txtSurname.Name = "txtSurname";
-			this.txtSurname.Size = new System.Drawing.Size(132, 22);
-			this.txtSurname.TabIndex = 8;
+			this.surnameTxt.Location = new System.Drawing.Point(125, 55);
+			this.surnameTxt.Margin = new System.Windows.Forms.Padding(4);
+			this.surnameTxt.Name = "surnameTxt";
+			this.surnameTxt.Size = new System.Drawing.Size(132, 22);
+			this.surnameTxt.TabIndex = 8;
 			// 
-			// txtName
+			// nameTxt
 			// 
-			this.txtName.Location = new System.Drawing.Point(125, 23);
-			this.txtName.Margin = new System.Windows.Forms.Padding(4);
-			this.txtName.Name = "txtName";
-			this.txtName.Size = new System.Drawing.Size(132, 22);
-			this.txtName.TabIndex = 7;
+			this.nameTxt.Location = new System.Drawing.Point(125, 23);
+			this.nameTxt.Margin = new System.Windows.Forms.Padding(4);
+			this.nameTxt.Name = "nameTxt";
+			this.nameTxt.Size = new System.Drawing.Size(132, 22);
+			this.nameTxt.TabIndex = 7;
 			// 
 			// FRadioButton
 			// 
@@ -383,27 +389,81 @@ namespace CD_Dealership
 			// dataView
 			// 
 			this.dataView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataView.Location = new System.Drawing.Point(13, 324);
+			this.dataView.Location = new System.Drawing.Point(27, 368);
 			this.dataView.Margin = new System.Windows.Forms.Padding(4);
 			this.dataView.Name = "dataView";
 			this.dataView.RowHeadersWidth = 51;
 			this.dataView.Size = new System.Drawing.Size(818, 274);
 			this.dataView.TabIndex = 26;
 			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+			this.label1.Location = new System.Drawing.Point(343, 9);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(91, 29);
+			this.label1.TabIndex = 33;
+			this.label1.Text = "Clients";
+			// 
+			// groupBox3
+			// 
+			this.groupBox3.Controls.Add(this.label11);
+			this.groupBox3.Controls.Add(this.label10);
+			this.groupBox3.Controls.Add(this.label9);
+			this.groupBox3.Controls.Add(this.SortcomboBox);
+			this.groupBox3.Controls.Add(this.comboBox2);
+			this.groupBox3.Controls.Add(this.textBox2);
+			this.groupBox3.Location = new System.Drawing.Point(301, 246);
+			this.groupBox3.Name = "groupBox3";
+			this.groupBox3.Size = new System.Drawing.Size(543, 115);
+			this.groupBox3.TabIndex = 34;
+			this.groupBox3.TabStop = false;
+			this.groupBox3.Text = "Sorting";
+			// 
+			// label9
+			// 
+			this.label9.AutoSize = true;
+			this.label9.Location = new System.Drawing.Point(60, 25);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(58, 17);
+			this.label9.TabIndex = 33;
+			this.label9.Text = "Sort By:";
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.Location = new System.Drawing.Point(44, 57);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(77, 17);
+			this.label10.TabIndex = 34;
+			this.label10.Text = "Search By:";
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.Location = new System.Drawing.Point(8, 89);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(113, 17);
+			this.label11.TabIndex = 35;
+			this.label11.Text = "Value to Search:";
+			// 
 			// Client
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(913, 625);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.comboBox2);
-			this.Controls.Add(this.SortcomboBox);
+			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+			this.ClientSize = new System.Drawing.Size(868, 654);
+			this.Controls.Add(this.groupBox3);
+			this.Controls.Add(this.label1);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.groupBox2);
 			this.Controls.Add(this.groupBox4);
 			this.Controls.Add(this.dataView);
 			this.Name = "Client";
 			this.Text = "Client";
+			this.Load += new System.EventHandler(this.Client_Load);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
 			this.groupBox2.ResumeLayout(false);
@@ -411,6 +471,8 @@ namespace CD_Dealership
 			this.groupBox4.ResumeLayout(false);
 			this.groupBox4.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataView)).EndInit();
+			this.groupBox3.ResumeLayout(false);
+			this.groupBox3.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -423,10 +485,10 @@ namespace CD_Dealership
 		private System.Windows.Forms.ComboBox SortcomboBox;
 		private System.Windows.Forms.GroupBox groupBox1;
 		private System.Windows.Forms.Button btnDelete;
-		private System.Windows.Forms.TextBox textBox1;
+		private System.Windows.Forms.TextBox deleteTxt;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.GroupBox groupBox2;
-		private System.Windows.Forms.TextBox txtNewVal;
+		private System.Windows.Forms.TextBox newValTxt;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Button btnUpdate;
 		private System.Windows.Forms.ComboBox columnComboBox;
@@ -434,11 +496,11 @@ namespace CD_Dealership
 		private System.Windows.Forms.TextBox txtIdUp;
 		private System.Windows.Forms.GroupBox groupBox4;
 		private System.Windows.Forms.Button btnAdd;
-		private System.Windows.Forms.TextBox txtAddress;
+		private System.Windows.Forms.TextBox addressTxt;
 		private System.Windows.Forms.TextBox txtPN;
-		private System.Windows.Forms.TextBox txtEmail;
-		private System.Windows.Forms.TextBox txtSurname;
-		private System.Windows.Forms.TextBox txtName;
+		private System.Windows.Forms.TextBox emailTxt;
+		private System.Windows.Forms.TextBox surnameTxt;
+		private System.Windows.Forms.TextBox nameTxt;
 		private System.Windows.Forms.RadioButton FRadioButton;
 		private System.Windows.Forms.RadioButton MRadioButton;
 		private System.Windows.Forms.Label label7;
@@ -447,5 +509,10 @@ namespace CD_Dealership
 		private System.Windows.Forms.Label label8;
 		private System.Windows.Forms.Label lblFN;
 		private System.Windows.Forms.DataGridView dataView;
+		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.GroupBox groupBox3;
+		private System.Windows.Forms.Label label11;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Label label9;
 	}
 }
